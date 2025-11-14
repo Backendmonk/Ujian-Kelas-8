@@ -148,66 +148,106 @@
 const QUESTIONS = [
 
 {
-q: "**Masalah 1: Menghitung Total Penjualan Harian (SUM).**\nToko Donat Pak Jaya mencatat penjualan donat dalam tabel berikut:\n\n+------------+--------+\n| Rasa       | Jumlah |\n+------------+--------+\n| Coklat     |   25   |\n| Stroberi   |   18   |\n| Keju       |   30   |\n+------------+--------+\nDari tabel tersebut, hitung total semua donat yang terjual menggunakan fungsi SUM.",
+q: "**Masalah 1: Menghitung Total Donat Terjual (SUM).**\nToko Donat Pak Jaya mencatat penjualan harian dalam tabel berikut:\n\n\
++------------+--------+\n\
+| Rasa       | Jumlah |\n\
++------------+--------+\n\
+| Coklat     |   25   |\n\
+| Stroberi   |   18   |\n\
+| Keju       |   30   |\n\
++------------+--------+\n\
+Hitung total seluruh donat yang terjual.",
 items:[
-"Klik sel tempat hasil akan ditampilkan",
-"Ketik =SUM(B2:B4)",
-"Tekan Enter untuk melihat total"
-],
-correct:[
-"Klik sel tempat hasil akan ditampilkan",
-"Ketik =SUM(B2:B4)",
-"Tekan Enter untuk melihat total"
-]
-},
-
-{
-q: "**Masalah 2: Mencari Nilai Tertinggi (MAX).**\nBu Rani ingin mencari nilai tertinggi dari ujian matematika siswa.\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Andi    |  78   |\n| Budi    |  90   |\n| Siti    |  85   |\n+---------+-------+\nGunakan fungsi MAX untuk menentukan nilai tertinggi.",
-items:[
-"Klik sel tujuan",
-"Masukkan rumus =MAX(B2:B4)",
+"Klik sel tempat total akan ditampilkan",
+"Ketik rumus =SUM(B2:B4)",
 "Tekan Enter"
 ],
 correct:[
-"Klik sel tujuan",
-"Masukkan rumus =MAX(B2:B4)",
+"Klik sel tempat total akan ditampilkan",
+"Ketik rumus =SUM(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 3: Menemukan Nilai Terendah (MIN).**\nPak Guru ingin mencari nilai terendah dari data berikut:\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Lala    |  95   |\n| Riko    |  80   |\n| Sari    |  88   |\n+---------+-------+\nGunakan MIN untuk menemukan nilai terkecil.",
+q: "**Masalah 2: Mencari Nilai Ujian Tertinggi (MAX).**\nPak Guru ingin mengetahui nilai tertinggi dari ujian matematika.\n\n\
++---------+-------+\n\
+| Nama    | Nilai |\n\
++---------+-------+\n\
+| Andi    |  78   |\n\
+| Budi    |  90   |\n\
+| Siti    |  85   |\n\
++---------+-------+\n\
+Gunakan fungsi MAX.",
 items:[
-"Klik sel kosong",
-"Ketik =MIN(B2:B4)",
-"Tekan Enter untuk hasil"
+"Klik sel hasil",
+"Ketik =MAX(B2:B4)",
+"Tekan Enter"
 ],
 correct:[
-"Klik sel kosong",
-"Ketik =MIN(B2:B4)",
-"Tekan Enter untuk hasil"
+"Klik sel hasil",
+"Ketik =MAX(B2:B4)",
+"Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 4: Menghitung Rata-Rata Nilai (AVERAGE).**\nSebuah kelas mengumpulkan nilai tugas berikut:\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Tono    |  70   |\n| Rio     |  85   |\n| Rani    |  90   |\n+---------+-------+\nGunakan AVERAGE untuk mencari nilai rata-rata.",
+q: "**Masalah 3: Menentukan Nilai Terendah (MIN).**\nBu Rani ingin mencari nilai yang paling kecil dari daftar nilai berikut:\n\n\
++---------+-------+\n\
+| Nama    | Nilai |\n\
++---------+-------+\n\
+| Riko    |  80   |\n\
+| Lala    |  95   |\n\
+| Sari    |  88   |\n\
++---------+-------+\n\
+Gunakan MIN untuk menemukan nilai terendah.",
 items:[
-"Klik sel untuk menampilkan rata-rata",
+"Klik sel kosong",
+"Ketik =MIN(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel kosong",
+"Ketik =MIN(B2:B4)",
+"Tekan Enter"
+]
+},
+
+{
+q: "**Masalah 4: Rata-Rata Nilai Tugas (AVERAGE).**\nKelas 8A mencatat nilai tugas sebagai berikut:\n\n\
++---------+-------+\n\
+| Nama    | Nilai |\n\
++---------+-------+\n\
+| Tono    |  70   |\n\
+| Rio     |  85   |\n\
+| Rani    |  90   |\n\
++---------+-------+\n\
+Hitung nilai rata-rata.",
+items:[
+"Klik sel hasil",
 "Ketik =AVERAGE(B2:B4)",
 "Tekan Enter"
 ],
 correct:[
-"Klik sel untuk menampilkan rata-rata",
+"Klik sel hasil",
 "Ketik =AVERAGE(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 5: Menghitung Jumlah Siswa Lulus (COUNTIF).**\nNilai siswa berikut:\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Ani     |  78   |\n| Beni    |  60   |\n| Wati    |  82   |\n+---------+-------+\nHitung berapa siswa yang nilainya di atas 70.",
+q: "**Masalah 5: Menghitung Siswa yang Lulus (COUNTIF).**\nKriteria kelulusan: nilai > 70.\n\n\
++---------+-------+\n\
+| Nama    | Nilai |\n\
++---------+-------+\n\
+| Ani     |  78   |\n\
+| Beni    |  60   |\n\
+| Wati    |  82   |\n\
++---------+-------+\n\
+Hitung jumlah siswa yang lulus.",
 items:[
-"Ketik =COUNTIF(B2:B4,\">70\")",
 "Klik sel tujuan",
+"Ketik =COUNTIF(B2:B4,\">70\")",
 "Tekan Enter"
 ],
 correct:[
@@ -218,7 +258,7 @@ correct:[
 },
 
 {
-q: "**Masalah 6: Menentukan Lulus atau Tidak (IF).**\nNilai Andi adalah 75. Ketentuannya: minimal 70 untuk lulus.\nGunakan IF untuk menentukan status Andi.",
+q: "**Masalah 6: Menentukan Status Lulus (IF).**\nNilai Dimas adalah 75. Standar kelulusan: minimal 70.\nGunakan IF untuk menentukan status.",
 items:[
 "Klik sel hasil",
 "Ketik =IF(75>=70,\"Lulus\",\"Tidak Lulus\")",
@@ -232,25 +272,41 @@ correct:[
 },
 
 {
-q: "**Masalah 7: Menjumlahkan Data Transaksi (SUM).**\nWarung Bu Putri mencatat transaksi:\n\n+------------+--------+\n| Barang     | Jumlah |\n+------------+--------+\n| Teh        |   12   |\n| Kopi       |   10   |\n| Susu       |    8   |\n+------------+--------+\nGunakan SUM untuk menghitung total.",
+q: "**Masalah 7: Menjumlahkan Berat Buah (SUM).**\nToko buah mencatat data berikut:\n\n\
++---------+--------+\n\
+| Buah    | Kg     |\n\
++---------+--------+\n\
+| Apel    |   5    |\n\
+| Mangga  |   7    |\n\
+| Jeruk   |   4    |\n\
++---------+--------+\n\
+Hitung total berat semua buah.",
 items:[
+"Klik sel hasil",
 "Ketik =SUM(B2:B4)",
-"Klik sel yang kosong",
 "Tekan Enter"
 ],
 correct:[
-"Klik sel yang kosong",
+"Klik sel hasil",
 "Ketik =SUM(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 8: Mencari Suhu Tertinggi (MAX).**\nStasiun cuaca mencatat suhu harian:\n\n+-----------+-------+\n| Hari      | Suhu  |\n+-----------+-------+\n| Senin     |  30   |\n| Selasa    |  32   |\n| Rabu      |  29   |\n+-----------+-------+\nTemukan suhu tertinggi dengan MAX.",
+q: "**Masalah 8: Suhu Tertinggi Mingguan (MAX).**\n\n\
++-----------+-------+\n\
+| Hari      | Suhu  |\n\
++-----------+-------+\n\
+| Senin     |  30   |\n\
+| Selasa    |  32   |\n\
+| Rabu      |  29   |\n\
++-----------+-------+\n\
+Gunakan MAX untuk menemukan suhu tertinggi.",
 items:[
 "Klik sel kosong",
-"Tekan Enter",
-"Ketik =MAX(B2:B4)"
+"Ketik =MAX(B2:B4)",
+"Tekan Enter"
 ],
 correct:[
 "Klik sel kosong",
@@ -260,10 +316,10 @@ correct:[
 },
 
 {
-q: "**Masalah 9: Menentukan Diskon (IF).**\nJika pembelian di atas 100 ribu dapat diskon, pembelian Ani adalah 120 ribu.\nGunakan IF.",
+q: "**Masalah 9: Diskon Belanja (IF).**\nJika belanja > 100.000 mendapatkan diskon. Total belanja Sinta: 120.000.",
 items:[
-"Ketik =IF(120000>100000,\"Diskon\",\"Tidak\")",
 "Klik sel hasil",
+"Ketik =IF(120000>100000,\"Diskon\",\"Tidak\")",
 "Tekan Enter"
 ],
 correct:[
@@ -274,63 +330,95 @@ correct:[
 },
 
 {
-q: "**Masalah 10: Menghitung Rata-Rata Tinggi Badan (AVERAGE).**\n\n+---------+-------+\n| Nama    | TB    |\n+---------+-------+\n| Fina    | 150   |\n| Riko    | 160   |\n| Tesa    | 155   |\n+---------+-------+\nHitung rata-rata tinggi badan.",
+q: "**Masalah 10: Rata-Rata Tinggi Badan (AVERAGE).**\n\n\
++---------+-------+\n\
+| Nama    | TB    |\n\
++---------+-------+\n\
+| Fina    | 150   |\n\
+| Riko    | 160   |\n\
+| Tesa    | 155   |\n\
++---------+-------+\n\
+Hitung rata-rata tinggi badan.",
 items:[
-"Klik sel kosong",
-"Tekan Enter",
-"Ketik =AVERAGE(B2:B4)"
+"Klik sel tujuan",
+"Ketik =AVERAGE(B2:B4)",
+"Tekan Enter"
 ],
 correct:[
-"Klik sel kosong",
+"Klik sel tujuan",
 "Ketik =AVERAGE(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 11: Menghitung Produk Terjual (COUNT).**\nTabel stok barang:\n\n+-------------+--------+\n| Barang      | Stok   |\n+-------------+--------+\n| Sabun       |   10   |\n| Sampo       |   15   |\n| Pasta Gigi  |    8   |\n+-------------+--------+\nHitung jumlah baris data menggunakan COUNT.",
-items:[
-"Ketik =COUNT(B2:B4)",
-"Klik sel tujuan",
-"Tekan Enter"
-],
-correct:[
-"Klik sel tujuan",
-"Ketik =COUNT(B2:B4)",
-"Tekan Enter"
-]
-},
-
-{
-q: "**Masalah 12: Menjumlahkan Berat Buah (SUM).**\n\n+---------+--------+\n| Buah     | Kg     |\n+---------+--------+\n| Apel     |  5     |\n| Mangga   |  7     |\n| Jeruk    |  4     |\n+---------+--------+\nHitung total berat buah.",
+q: "**Masalah 11: Menghitung Jumlah Data (COUNT).**\n\n\
++-------------+--------+\n\
+| Barang      | Stok   |\n\
++-------------+--------+\n\
+| Sabun       |  10    |\n\
+| Sampo       |  15    |\n\
+| Pasta Gigi  |   8    |\n\
++-------------+--------+\n\
+Hitung jumlah baris data stok.",
 items:[
 "Klik sel hasil",
-"Ketik =SUM(B2:B4)",
+"Ketik =COUNT(B2:B4)",
 "Tekan Enter"
 ],
 correct:[
 "Klik sel hasil",
+"Ketik =COUNT(B2:B4)",
+"Tekan Enter"
+]
+},
+
+{
+q: "**Masalah 12: Total Biaya Harian (SUM).**\n\n\
++-------------+----------+\n\
+| Kebutuhan   | Biaya    |\n\
++-------------+----------+\n\
+| Transport   | 20000    |\n\
+| Makan       | 25000    |\n\
+| Jajan       | 15000    |\n\
++-------------+----------+\n\
+Hitung total pengeluaran.",
+items:[
+"Klik sel kosong",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel kosong",
 "Ketik =SUM(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 13: Menentukan Nilai Minimum (MIN).**\n\n+---------+-------+\n| Siswa   | Nilai |\n+---------+-------+\n| Joko    |  88   |\n| Putri   |  92   |\n| Wawan   |  75   |\n+---------+-------+\nCari nilai terendah.",
+q: "**Masalah 13: Nilai Minimum Kelas (MIN).**\n\n\
++---------+-------+\n\
+| Siswa   | Nilai |\n\
++---------+-------+\n\
+| Joko    |  88   |\n\
+| Putri   |  92   |\n\
+| Wawan   |  75   |\n\
++---------+-------+\n\
+Cari nilai terendah.",
 items:[
+"Klik sel hasil",
 "Ketik =MIN(B2:B4)",
-"Klik sel kosong",
 "Tekan Enter"
 ],
 correct:[
-"Klik sel kosong",
+"Klik sel hasil",
 "Ketik =MIN(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 14: Menentukan Bonus (IF).**\nKaryawan mendapat bonus jika kehadiran lebih dari 20 hari. Kehadiran Ria: 22.\nGunakan IF.",
+q: "**Masalah 14: Menentukan Bonus Kehadiran (IF).**\nKaryawan mendapat bonus jika hadir lebih dari 20 hari.\nKehadiran Ria: 22.",
 items:[
 "Klik sel hasil",
 "Ketik =IF(22>20,\"Bonus\",\"Tidak\")",
@@ -344,53 +432,85 @@ correct:[
 },
 
 {
-q: "**Masalah 15: Menghitung Rata-Rata Uang Saku (AVERAGE).**\n\n+---------+--------+\n| Hari    | Uang   |\n+---------+--------+\n| Senin   | 15000  |\n| Selasa  | 20000  |\n| Rabu    | 10000  |\n+---------+--------+\nHitung rata-rata uang saku.",
+q: "**Masalah 15: Rata-Rata Uang Saku Mingguan (AVERAGE).**\n\n\
++---------+--------+\n\
+| Hari    | Uang   |\n\
++---------+--------+\n\
+| Senin   | 15000  |\n\
+| Selasa  | 20000  |\n\
+| Rabu    | 10000  |\n\
++---------+--------+\n\
+Hitung rata-rata.",
 items:[
-"Klik sel kosong",
+"Klik sel hasil",
 "Ketik =AVERAGE(B2:B4)",
 "Tekan Enter"
 ],
 correct:[
-"Klik sel kosong",
+"Klik sel hasil",
 "Ketik =AVERAGE(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 16: Menjumlahkan Pengeluaran (SUM).**\n\n+-------------+----------+\n| Kebutuhan   | Biaya    |\n+-------------+----------+\n| Transport   | 20000    |\n| Makan       | 25000    |\n| Jajan       | 15000    |\n+-------------+----------+\nJumlahkan semua biaya.",
+q: "**Masalah 16: Total Nilai Tugas (SUM).**\n\n\
++---------+-------+\n\
+| Tugas   | Nilai |\n\
++---------+-------+\n\
+| Tugas 1 |  80   |\n\
+| Tugas 2 |  90   |\n\
+| Tugas 3 |  85   |\n\
++---------+-------+\n\
+Hitung total nilai.",
 items:[
-"Klik sel hasil",
+"Klik sel tujuan",
 "Ketik =SUM(B2:B4)",
 "Tekan Enter"
 ],
 correct:[
-"Klik sel hasil",
+"Klik sel tujuan",
 "Ketik =SUM(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 17: Mencari Nilai Tertinggi (MAX).**\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Nani    |  65   |\n| Rara    |  88   |\n| Mika    |  90   |\n+---------+-------+\nCari nilai terbesar.",
+q: "**Masalah 17: Nilai Maksimum (MAX).**\n\n\
++---------+-------+\n\
+| Nama    | Nilai |\n\
++---------+-------+\n\
+| Nani    |  65   |\n\
+| Rara    |  88   |\n\
+| Mika    |  90   |\n\
++---------+-------+\n\
+Gunakan MAX untuk cari nilai tertinggi.",
 items:[
-"Klik sel tujuan",
+"Klik sel hasil",
 "Ketik =MAX(B2:B4)",
 "Tekan Enter"
 ],
 correct:[
-"Klik sel tujuan",
+"Klik sel hasil",
 "Ketik =MAX(B2:B4)",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 18: Menghitung Jumlah Nilai ≥ 80 (COUNTIF).**\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Sasa    |  82   |\n| Fina    |  70   |\n| Dodi    |  90   |\n+---------+-------+\nHitung berapa siswa yang nilainya ≥ 80.",
+q: "**Masalah 18: Hitung Nilai ≥ 80 (COUNTIF).**\n\n\
++---------+-------+\n\
+| Nama    | Nilai |\n\
++---------+-------+\n\
+| Sasa    |  82   |\n\
+| Fina    |  70   |\n\
+| Dodi    |  90   |\n\
++---------+-------+\n\
+Hitung siswa dengan nilai ≥ 80.",
 items:[
 "Klik sel kosong",
-"Tekan Enter",
-"Ketik =COUNTIF(B2:B4,\">=80\")"
+"Ketik =COUNTIF(B2:B4,\">=80\")",
+"Tekan Enter"
 ],
 correct:[
 "Klik sel kosong",
@@ -400,7 +520,7 @@ correct:[
 },
 
 {
-q: "**Masalah 19: Menentukan Status Stok (IF).**\nJika stok < 5 maka 'Habis', jika tidak 'Tersedia'. Stok apel: 3.\nGunakan IF.",
+q: "**Masalah 19: Status Stok (IF).**\nJika stok < 5 maka 'Habis'. Stok apel: 3.",
 items:[
 "Klik sel hasil",
 "Ketik =IF(3<5,\"Habis\",\"Tersedia\")",
@@ -414,7 +534,15 @@ correct:[
 },
 
 {
-q: "**Masalah 20: Menghitung Total Nilai (SUM).**\n\n+---------+-------+\n| Tugas   | Nilai |\n+---------+-------+\n| Tugas 1 |  80   |\n| Tugas 2 |  90   |\n| Tugas 3 |  85   |\n+---------+-------+\nGunakan SUM untuk menjumlahkan semua nilai.",
+q: "**Masalah 20: Total Perolehan Nilai (SUM).**\n\n\
++---------+-------+\n\
+| Tugas   | Nilai |\n\
++---------+-------+\n\
+| Quiz    |  85   |\n\
+| UTS     |  90   |\n\
+| UAS     |  88   |\n\
++---------+-------+\n\
+Gunakan SUM untuk menjumlahkan seluruh nilai.",
 items:[
 "Klik sel tujuan",
 "Ketik =SUM(B2:B4)",
