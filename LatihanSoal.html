@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Ujian Algoritma - Kelas 7 (Paperless, Click-to-Move)</title>
+
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<style>
+ body { font-family: "Poppins", sans-serif; background: linear-gradient(180deg,#dbeafe 0%, #fce7f3 100%); -webkit-font-smoothing:antialiased; }
+ .card { background: white; border-radius: 14px; box-shadow: 0 10px 30px rgba(16,24,40,0.08); }
+ .chip { background:#eef2ff; color:#3730a3; padding:6px 10px; border-radius:999px; font-weight:700; }
+ .draggable { background:#60a5fa; color:#fff; padding:10px 12px; border-radius:12px; cursor:pointer; user-select:none; margin-bottom:8px; transition: background-color 0.15s; touch-action: manipulation; }
+ .draggable:hover { background-color: #3b82f6; }
+ .source { background:#eff6ff; border:2px dashed rgba(99,102,241,0.22); min-height:90px; padding:10px; border-radius:12px; }
+ .target { background:#fff7ed; border:2px dashed rgba(245,158,11,0.22); min-height:90px; padding:10px; border-radius:12px; }
+ .note { font-size:13px; color:#374151; }
+ #warning { background:#fff7ed; border:2px solid #f59e0b; color:#92400e; font-weight:700; border-radius:10px; padding:10px; margin-bottom:12px; }
+ .btn { transition: .15s; }
+ .btn:active { transform: translateY(1px); }
+ @media (max-width:700px) { .two-col { grid-template-columns: 1fr !important; } }
+ .result-data-box { display: flex; justify-content: space-around; background: #f1f5f9; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
+</style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+<div id="root" class="w-full max-w-4xl">
+ <div class="card p-6" id="capture-area">
+  <div id="warning" class="mb-4">⚠️ Jangan refresh halaman selama mengerjakan kuis — jika refresh, progres hilang. Setelah selesai juga tidak bisa mengulang pada perangkat ini.</div>
+
+  <!-- Start Screen -->
+  <div id="startScreen">
+   <h1 class="text-2xl font-extrabold text-indigo-700 mb-2">🧩 Ujian kelas 8</h1>
+   <p class="text-gray-600 mb-4">Susun urutan langkah yang benar.</p>
+
+   <label for="studentName" class="block text-sm font-medium text-gray-700">Nama Siswa</label>
+   <input id="studentName" class="mt-2 mb-3 w-full p-3 border rounded-lg" placeholder="Tulis nama lengkap..." />
+
+   <div class="grid grid-cols-2 gap-3 mb-4">
+    <div>
+     <label for="studentNis" class="block text-sm font-medium text-gray-700">Absen (NIS)</label>
+     <input id="studentNis" class="mt-2 w-full p-3 border rounded-lg" placeholder="Contoh: 01" />
+    </div>
+    <div>
+     <label for="studentClass" class="block text-sm font-medium text-gray-700">Kelas</label>
+     <input id="studentClass" class="mt-2 w-full p-3 border rounded-lg" placeholder="Contoh: 7A" />
+    </div>
+   </div>
+
+   <div class="flex gap-3">
+    <button id="btnStart" class="btn bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold">Mulai Ujian</button>
+    <button id="btnPreview" class="btn bg-white border px-4 py-2 rounded-lg">Lihat Kisi-Kisi</button>
+   </div>
+
+   <p class="text-sm text-gray-500 mt-4">Mode: <b>Click-to-move</b> (Klik item di kiri → masuk ke kanan. Klik item di kanan → kembali ke kiri).</p>
+  </div>
+
+  <!-- Kisi-Kisi -->
+  <div id="kisi" class="hidden mt-4 card p-4">
+   <h3 class="font-semibold text-indigo-700 mb-2">Kisi-Kisi Materi</h3>
+   <ul class="list-disc pl-5 text-gray-700">
+    <li>Aktivitas harian sederhana</li>
+    <li>Dunia digital & teknologi sehari-hari</li>
+    <li>Kegiatan rumah tangga & luar rumah</li>
+    <li>Langkah algoritmik sederhana & tipe data cerita</li>
+   </ul>
+  </div>
+
+  <!-- Quiz Area -->
+  <div id="quizArea" class="hidden mt-2">
+   <div class="flex items-center justify-between mb-4">
+    <span id="qLabel" class="chip">Soal 1 / 10</span>
+    <div class="flex items-center gap-3">
+     <span id="progressText" class="text-sm text-gray-600">Progres</span>
+     <div class="w-40 bg-gray-200 rounded-full h-2 overflow-hidden">
+      <div id="progressFill" class="bg-indigo-600 h-2 rounded-full" style="width:0%"></div>
+     </div>
+    </div>
+   </div>
+
+   <div class="card p-4 mb-4">
+    <h2 id="qText" class="text-lg font-bold text-indigo-700 mb-4">Pertanyaan akan tampil di sini</h2>
+
+    <div class="grid two-col grid-cols-2 gap-4">
+     <div>
+      <h4 class="font-medium text-gray-600 mb-2">Pilihan langkah (klik untuk pindah)</h4>
+      <div id="source" class="source"></div>
+     </div>
+
+     <div>
+      <h4 class="font-medium text-gray-600 mb-2">Susun urutan di sini (tarik untuk reorder)</h4>
+      <div id="target" class="target"></div>
+      <p class="note mt-2">Ket: klik item di kanan untuk mengembalikan ke kiri; tarik untuk mengubah urutan.</p>
+     </div>
+    </div>
+
+    <div class="flex items-center justify-between mt-4">
+     <div class="text-sm text-gray-600">Tarik item di kanan untuk ubah urutan atau klik untuk kembalikan.</div>
+     <div class="flex gap-2">
+      <button id="btnPrev" class="btn px-4 py-2 rounded-md bg-white border">Sebelumnya</button>
+      <button id="btnNext" class="btn px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-60">Selanjutnya</button>
+     </div>
+    </div>
+   </div>
+  </div>
+
+  <!-- Result Area -->
+  <div id="resultArea" class="hidden text-center p-4">
+   <h2 class="text-2xl font-bold text-indigo-700 mb-2">✅ Ujian Selesai</h2>
+
+   <div class="result-data-box">
+    <div class="flex flex-col items-center">
+     <span class="text-xs text-gray-500">NAMA SISWA</span>
+     <span id="resultName" class="text-base font-semibold text-gray-800"></span>
+    </div>
+    <div class="flex flex-col items-center">
+     <span class="text-xs text-gray-500">ABSEN (NIS)</span>
+     <span id="resultNis" class="text-base font-semibold text-gray-800"></span>
+    </div>
+    <div class="flex flex-col items-center">
+     <span class="text-xs text-gray-500">KELAS</span>
+     <span id="resultClass" class="text-base font-semibold text-gray-800"></span>
+    </div>
+   </div>
+
+   <p id="resultText" class="text-lg mb-2 font-bold"></p>
+   <p id="statusText" class="text-xl font-extrabold mb-4"></p>
+
+   <button id="btnReset" class="btn bg-red-500 text-white px-4 py-2 rounded-lg">🔄 Reset Ujian</button>
+
+   <div class="flex justify-center gap-3 mt-3">
+    <button id="btnScreenshot" class="btn bg-green-500 text-white px-4 py-2 rounded-lg font-bold">📸 Ambil Screenshot Hasil</button>
+    <button id="btnShareWA" class="btn bg-blue-500 text-white px-4 py-2 rounded-lg font-bold">💬 Kirim via WhatsApp</button>
+    <button id="btnDone" class="btn bg-indigo-600 text-white px-4 py-2 rounded-lg">Selesai</button>
+   </div>
+  </div>
+
+ </div>
+</div>
+
+<script>
+/* =========================
+   Soal
+   ========================= */
+const QUESTIONS = [
+  {
+    q: "**Masalah 1: Layar HP Tidak Merespon.** Andi sedang mencoba membuka aplikasi kamera, tetapi layar HP-nya tidak merespon ketika disentuh. Susun langkah yang benar untuk memastikan apakah masalahnya berasal dari hardware layar sentuh.",
+    items: [
+      "Coba bersihkan layar dari kotoran atau air",
+      "Restart HP untuk memulai ulang sistem",
+      "Tes bagian layar lain apakah bisa disentuh",
+      "Gunakan fitur 'Safe Mode' untuk memeriksa apakah ada aplikasi yang mengganggu"
+    ],
+    correct: [
+      "Coba bersihkan layar dari kotoran atau air",
+      "Tes bagian layar lain apakah bisa disentuh",
+      "Restart HP untuk memulai ulang sistem",
+      "Gunakan fitur 'Safe Mode' untuk memeriksa apakah ada aplikasi yang mengganggu"
+    ]
+  },
+
+  {
+    q: "**Masalah 2: Ketika Menekan Tombol Power, HP Tidak Menyala.** Bayu panik karena HP-nya tiba-tiba mati dan tidak mau menyala. Susun proses pengecekan hardware yang benar.",
+    items: [
+      "Periksa apakah baterai masih memiliki daya",
+      "Coba isi daya HP selama beberapa menit",
+      "Tekan lama tombol power 5–10 detik",
+      "Coba gunakan charger atau kabel lain"
+    ],
+    correct: [
+      "Periksa apakah baterai masih memiliki daya",
+      "Coba isi daya HP selama beberapa menit",
+      "Tekan lama tombol power 5–10 detik",
+      "Coba gunakan charger atau kabel lain"
+    ]
+  },
+
+  {
+    q: "**Masalah 3: Proses Input pada Handphone.** Jika Sita mengetik pesan di HP menggunakan keyboard virtual, susun urutan proses yang benar di dalam sistem HP.",
+    items: [
+      "Sistem operasi menerima input dari layar sentuh",
+      "Layar menampilkan huruf yang ditekan",
+      "Sensor layar mendeteksi sentuhan jari",
+      "Prosesor memproses input untuk mengubahnya menjadi karakter"
+    ],
+    correct: [
+      "Sensor layar mendeteksi sentuhan jari",
+      "Sistem operasi menerima input dari layar sentuh",
+      "Prosesor memproses input untuk mengubahnya menjadi karakter",
+      "Layar menampilkan huruf yang ditekan"
+    ]
+  },
+
+  {
+    q: "**Masalah 4: HP Lemot Saat Dipakai Bermain Game.** Rino merasa HP-nya sangat lambat saat bermain game online. Susun langkah pengecekan hardware yang relevan.",
+    items: [
+      "Periksa kapasitas RAM apakah hampir penuh",
+      "Tutup aplikasi yang berjalan di latar belakang",
+      "Cek suhu HP apakah terlalu panas",
+      "Restart HP untuk menyegarkan memori"
+    ],
+    correct: [
+      "Periksa kapasitas RAM apakah hampir penuh",
+      "Tutup aplikasi yang berjalan di latar belakang",
+      "Cek suhu HP apakah terlalu panas",
+      "Restart HP untuk menyegarkan memori"
+    ]
+  },
+
+  {
+    q: "**Masalah 5: Kamera HP Buram.** Dara ingin mengambil foto tugas sekolah namun hasil kameranya buram. Susun langkah pengecekan hardware kamera.",
+    items: [
+      "Bersihkan lensa kamera dari debu",
+      "Cek apakah plastik pelindung lensa masih menempel",
+      "Tes kamera dengan aplikasi lain",
+      "Restart HP untuk memastikan sistem kamera normal"
+    ],
+    correct: [
+      "Bersihkan lensa kamera dari debu",
+      "Cek apakah plastik pelindung lensa masih menempel",
+      "Tes kamera dengan aplikasi lain",
+      "Restart HP untuk memastikan sistem kamera normal"
+    ]
+  },
+
+  /* ================= SOFTWARE ================= */
+
+  {
+    q: "**Masalah 6: Aplikasi Tidak Bisa Dibuka.** Lala ingin membuka aplikasi edit foto, tetapi aplikasi langsung keluar. Susun langkah memperbaiki masalah software.",
+    items: [
+      "Tutup aplikasi dari recent apps",
+      "Hapus cache aplikasi",
+      "Update aplikasi ke versi terbaru",
+      "Restart HP untuk memuat ulang sistem"
+    ],
+    correct: [
+      "Tutup aplikasi dari recent apps",
+      "Hapus cache aplikasi",
+      "Update aplikasi ke versi terbaru",
+      "Restart HP untuk memuat ulang sistem"
+    ]
+  },
+
+  {
+    q: "**Masalah 7: HP Tidak Bisa Install Aplikasi Baru.** Play Store menolak mengunduh aplikasi karena ‘Storage Full’. Susun langkah penanganannya.",
+    items: [
+      "Hapus file yang tidak dibutuhkan",
+      "Hapus aplikasi yang jarang digunakan",
+      "Pindahkan file ke penyimpanan cloud",
+      "Coba install ulang aplikasi setelah ada ruang"
+    ],
+    correct: [
+      "Hapus file yang tidak dibutuhkan",
+      "Hapus aplikasi yang jarang digunakan",
+      "Pindahkan file ke penyimpanan cloud",
+      "Coba install ulang aplikasi setelah ada ruang"
+    ]
+  },
+
+  {
+    q: "**Masalah 8: Perbedaan Kerja Hardware & Software Dalam Merekam Suara.** Ketika Fina merekam suara di kelas, susun urutan proses antara hardware dan software.",
+    items: [
+      "Aplikasi perekam menyimpan file audio di memori",
+      "Prosesor mengubah gelombang suara menjadi data digital",
+      "Mikrofon menangkap suara",
+      "Software perekam menampilkan gelombang suara"
+    ],
+    correct: [
+      "Mikrofon menangkap suara",
+      "Prosesor mengubah gelombang suara menjadi data digital",
+      "Software perekam menampilkan gelombang suara",
+      "Aplikasi perekam menyimpan file audio di memori"
+    ]
+  },
+
+  {
+    q: "**Masalah 9: HP Mengalami Crash Setelah Update.** Bima meng-update sistem dan HP menjadi sering restart sendiri.",
+    items: [
+      "Cek aplikasi apa yang tidak kompatibel",
+      "Clear cache sistem",
+      "Restart HP beberapa kali",
+      "Lakukan ‘Factory Reset’ jika masalah berlanjut"
+    ],
+    correct: [
+      "Cek aplikasi apa yang tidak kompatibel",
+      "Clear cache sistem",
+      "Restart HP beberapa kali",
+      "Lakukan ‘Factory Reset’ jika masalah berlanjut"
+    ]
+  },
+
+  {
+    q: "**Masalah 10: Keyboard HP Error.** Ketika mengetik, keyboard menutup sendiri. Susun langkah memperbaiki error software keyboard.",
+    items: [
+      "Hapus cache aplikasi keyboard",
+      "Update keyboard ke versi terbaru",
+      "Restart HP",
+      "Coba gunakan keyboard lain sementara"
+    ],
+    correct: [
+      "Hapus cache aplikasi keyboard",
+      "Update keyboard ke versi terbaru",
+      "Restart HP",
+      "Coba gunakan keyboard lain sementara"
+    ]
+  },
+
+  /* ================= EXCEL ================= */
+
+  {
+    q: "**Masalah 11: Menghitung Total Pengeluaran.** Dina mencatat pengeluaran jajan selama seminggu di Excel. Susun langkah menggunakan fungsi SUM.",
+    items: [
+      "Blok semua sel pengeluaran",
+      "Klik fungsi SUM",
+      "Tekan Enter untuk menampilkan hasil",
+      "Pastikan angka sudah diisi dengan benar"
+    ],
+    correct: [
+      "Pastikan angka sudah diisi dengan benar",
+      "Blok semua sel pengeluaran",
+      "Klik fungsi SUM",
+      "Tekan Enter untuk menampilkan hasil"
+    ]
+  },
+
+  {
+    q: "**Masalah 12: Mencari Nilai Tertinggi.** Guru meminta Rafi mencari nilai tertinggi kelas di Excel. Susun langkah menggunakan fungsi MAX.",
+    items: [
+      "Blok seluruh data nilai",
+      "Pilih fungsi MAX",
+      "Tekan Enter untuk melihat hasil",
+      "Periksa apakah semua data sudah benar"
+    ],
+    correct: [
+      "Periksa apakah semua data sudah benar",
+      "Blok seluruh data nilai",
+      "Pilih fungsi MAX",
+      "Tekan Enter untuk melihat hasil"
+    ]
+  },
+
+  {
+    q: "**Masalah 13: Menentukan Lulus/Tidak.** Guru ingin menentukan siswa lulus (≥75) atau tidak menggunakan fungsi IF.",
+    items: [
+      "Masukkan rumus IF pada kolom status",
+      "=IF(nilai>=75,\"Lulus\",\"Tidak Lulus\")",
+      "Blok sel nilai siswa",
+      "Tekan Enter untuk menerapkan rumus"
+    ],
+    correct: [
+      "Blok sel nilai siswa",
+      "Masukkan rumus IF pada kolom status",
+      "=IF(nilai>=75,\"Lulus\",\"Tidak Lulus\")",
+      "Tekan Enter untuk menerapkan rumus"
+    ]
+  },
+
+  {
+    q: "**Masalah 14: Menghitung Rata-rata Ulangan.** Siswa diminta mencari nilai rata-rata ulangan harian menggunakan fungsi AVERAGE.",
+    items: [
+      "Pastikan semua nilai sudah terisi",
+      "Blok kolom nilai",
+      "Pilih fungsi AVERAGE",
+      "Tekan Enter"
+    ],
+    correct: [
+      "Pastikan semua nilai sudah terisi",
+      "Blok kolom nilai",
+      "Pilih fungsi AVERAGE",
+      "Tekan Enter"
+    ]
+  },
+
+  {
+    q: "**Masalah 15: Menandai Siswa Remedial.** Guru ingin menandai siswa dengan nilai < 60 sebagai 'Remedial' menggunakan IF.",
+    items: [
+      "Blok nilai siswa",
+      "Masukkan rumus IF",
+      "=IF(nilai<60,\"Remedial\",\"Aman\")",
+      "Tekan Enter"
+    ],
+    correct: [
+      "Blok nilai siswa",
+      "Masukkan rumus IF",
+      "=IF(nilai<60,\"Remedial\",\"Aman\")",
+      "Tekan Enter"
+    ]
+  },
+
+  {
+    q: "**Masalah 16: Menghitung Diskon Belanja di Excel.** Toko memberikan diskon 10%. Susun langkah perhitungannya.",
+    items: [
+      "Masukkan harga awal",
+      "Gunakan rumus =harga*10%",
+      "Kurangi harga awal dengan hasil diskon",
+      "Tampilkan harga akhir"
+    ],
+    correct: [
+      "Masukkan harga awal",
+      "Gunakan rumus =harga*10%",
+      "Kurangi harga awal dengan hasil diskon",
+      "Tampilkan harga akhir"
+    ]
+  },
+
+  {
+    q: "**Masalah 17: Mengecek Apakah Angka Genap.** Irfan ingin memeriksa apakah sebuah angka di Excel bernilai genap menggunakan rumus logika.",
+    items: [
+      "Gunakan rumus =IF(MOD(angka,2)=0,\"Genap\",\"Ganjil\")",
+      "Masukkan angka ke sel",
+      "Tekan Enter",
+      "Blok sel untuk menerapkan rumus"
+    ],
+    correct: [
+      "Masukkan angka ke sel",
+      "Gunakan rumus =IF(MOD(angka,2)=0,\"Genap\",\"Ganjil\")",
+      "Tekan Enter",
+      "Blok sel untuk menerapkan rumus"
+    ]
+  },
+
+  {
+    q: "**Masalah 18: Menjumlahkan Hanya Angka Positif.** Guru meminta menjumlahkan hanya nilai positif menggunakan fungsi SUMIF.",
+    items: [
+      "Blok kolom nilai",
+      "Gunakan fungsi SUMIF",
+      "Masukkan kriteria '>0'",
+      "Tekan Enter untuk mendapatkan jumlah"
+    ],
+    correct: [
+      "Blok kolom nilai",
+      "Gunakan fungsi SUMIF",
+      "Masukkan kriteria '>0'",
+      "Tekan Enter untuk mendapatkan jumlah"
+    ]
+  },
+
+  {
+    q: "**Masalah 19: Mengurutkan Nilai dari Tertinggi.** Excel digunakan untuk mengurutkan nilai kelas. Susun langkahnya.",
+    items: [
+      "Blok seluruh data nilai",
+      "Klik Sort & Filter",
+      "Pilih 'Sort Largest to Smallest'",
+      "Periksa hasil pengurutan"
+    ],
+    correct: [
+      "Blok seluruh data nilai",
+      "Klik Sort & Filter",
+      "Pilih 'Sort Largest to Smallest'",
+      "Periksa hasil pengurutan"
+    ]
+  },
+
+  {
+    q: "**Masalah 20: Menghitung Bonus Pegawai.** Perusahaan memberi bonus jika jam kerja > 160 jam. Gunakan IF untuk menentukan bonus.",
+    items: [
+      "Masukkan data jam kerja",
+      "Gunakan rumus =IF(jam>160,\"Bonus\",\"Tidak\")",
+      "Tekan Enter",
+      "Blok sel untuk menerapkan ke baris lain"
+    ],
+    correct: [
+      "Masukkan data jam kerja",
+      "Gunakan rumus =IF(jam>160,\"Bonus\",\"Tidak\")",
+      "Tekan Enter",
+      "Blok sel untuk menerapkan ke baris lain"
+    ]
+  }
+];
+
+/* =========================
+   App logic
+   ========================= */
+const KKM = 72;
+const totalQ = QUESTIONS.length;
+let current = 0;
+let answers = Array(totalQ).fill(null);
+let studentName='', studentNis='', studentClass='';
+const WA_NUMBER = '6285738176630'; // ganti sesuai tujuan
+
+// DOM
+const D = id => document.getElementById(id);
+const $ = {
+ startScreen: D('startScreen'), quizArea: D('quizArea'), kisi: D('kisi'), resultArea: D('resultArea'),
+ resultText: D('resultText'), statusText: D('statusText'),
+ studentNameInput: D('studentName'), studentNisInput: D('studentNis'), studentClassInput: D('studentClass'),
+ resultName: D('resultName'), resultNis: D('resultNis'), resultClass: D('resultClass'),
+ btnStart: D('btnStart'), btnPreview: D('btnPreview'), btnScreenshot: D('btnScreenshot'),
+ btnShareWA: D('btnShareWA'), btnDone: D('btnDone'), warningBar: D('warning'),
+ qLabel: D('qLabel'), qText: D('qText'), sourceEl: D('source'), targetEl: D('target'),
+ btnPrev: D('btnPrev'), btnNext: D('btnNext'), progressFill: D('progressFill'), progressText: D('progressText')
+};
+
+// Prevent refresh if not finished
+window.addEventListener('beforeunload', e=>{
+ if(!localStorage.getItem('lifeQuizTaken')){
+  e.preventDefault(); e.returnValue = "⚠️ Jangan refresh halaman ini! Jawaban/hasil bisa hilang.";
+ }
+});
+
+// ======= Reset with confirmation =======
+D('btnReset').addEventListener('click', () => {
+  if(confirm("⚠️ Yakin ingin reset kuis? Semua jawaban sebelumnya akan hilang.")){
+    localStorage.removeItem('lifeQuizTaken');
+    localStorage.removeItem('lifeQuizResult');
+    location.reload();
+  }
+});
+
+// ======= If already taken, show result =======
+if(localStorage.getItem('lifeQuizTaken')){
+  const stored = JSON.parse(localStorage.getItem('lifeQuizResult')||'{}');
+  displayResultScreen(stored);
+}
+
+// Toggle kisi
+$.btnPreview.addEventListener('click', ()=>$.kisi.classList.toggle('hidden'));
+
+// Start quiz
+$.btnStart.addEventListener('click', ()=>{
+ studentName = $.studentNameInput.value.trim();
+ studentNis = $.studentNisInput.value.trim();
+ studentClass = $.studentClassInput.value.trim();
+ if(!studentName || !studentNis || !studentClass) return alert('Nama, Absen, dan Kelas harus diisi.');
+ if(localStorage.getItem('lifeQuizTaken')) return alert('⚠️ Ujian sudah selesai di perangkat ini.');
+
+ $.startScreen.classList.add('hidden');
+ $.quizArea.classList.remove('hidden');
+ renderQuestion(current);
+});
+
+// Render question
+function renderQuestion(idx){
+ const q = QUESTIONS[idx];
+ $.qLabel.textContent = `Soal ${idx+1} / ${totalQ}`;
+ $.qText.innerHTML = q.q;
+
+ // reset source & target
+ $.sourceEl.innerHTML = '';
+ $.targetEl.innerHTML = '';
+
+ // source items
+ q.items.forEach(item=>{
+  const div = document.createElement('div');
+  div.textContent = item;
+  div.className = 'draggable';
+  div.onclick = ()=>moveToTarget(div);
+  $.sourceEl.appendChild(div);
+ });
+
+ // restore previous answer if ada
+ if(answers[idx]){
+  answers[idx].forEach(item=>{
+   const div = document.createElement('div');
+   div.textContent = item;
+   div.className = 'draggable';
+   div.onclick = ()=>moveToSource(div);
+   $.targetEl.appendChild(div);
+  });
+ }
+
+ // Enable drag on target
+ new Sortable($.targetEl, {animation:150, onEnd:()=>updateAnswer()});
+
+ // Disable prev/next
+ $.btnPrev.disabled = idx===0;
+ $.btnNext.textContent = idx===totalQ-1?'Selesai':'Selanjutnya';
+}
+
+// Move item left→right
+function moveToTarget(el){
+  $.targetEl.appendChild(el);
+  el.onclick = ()=>moveToSource(el);
+  updateAnswer();
+}
+// Move item right→left
+function moveToSource(el){
+  $.sourceEl.appendChild(el);
+  el.onclick = ()=>moveToTarget(el);
+  updateAnswer();
+}
+// Save current answer
+function updateAnswer(){
+ answers[current] = Array.from($.targetEl.children).map(d=>d.textContent);
+ const perc = Math.round((current/totalQ)*100);
+ $.progressFill.style.width = perc+'%';
+ $.progressText.textContent = `Progres ${perc}%`;
+}
+
+// Prev/Next
+$.btnPrev.addEventListener('click', ()=>{
+ if(current>0){ current--; renderQuestion(current); }
+});
+$.btnNext.addEventListener('click', ()=>{
+  updateAnswer();
+  if(current<totalQ-1){ current++; renderQuestion(current); }
+  else finishQuiz();
+});
+
+// Finish
+function finishQuiz(){
+ updateAnswer();
+ let correctCount = 0;
+ for(let i=0;i<totalQ;i++){
+   if(JSON.stringify(answers[i]||[])===JSON.stringify(QUESTIONS[i].correct)) correctCount++;
+ }
+ const percent = Math.round(correctCount/totalQ*100);
+ const status = percent>=KKM?'LULUS':'REMEDIAL';
+ const data = {
+   name: studentName, nis: studentNis, class: studentClass,
+   score: percent, correct: correctCount, total: totalQ, status
+ };
+ localStorage.setItem('lifeQuizTaken','true');
+ localStorage.setItem('lifeQuizResult', JSON.stringify(data));
+ displayResultScreen(data);
+}
+
+// Show result
+function displayResultScreen(data){
+ $.startScreen.classList.add('hidden');
+ $.quizArea.classList.add('hidden');
+ $.resultArea.classList.remove('hidden');
+
+ $.resultName.textContent = data.name;
+ $.resultNis.textContent = data.nis;
+ $.resultClass.textContent = data.class;
+ $.resultText.textContent = `Nilai kamu: ${data.score} (Benar ${data.correct} / ${data.total})`;
+ $.statusText.textContent = `${data.status} • KKM = ${KKM}`;
+ $.warningBar.textContent = data.status==='LULUS'
+   ?"✅ Kuis selesai. Hasil tersimpan di perangkat ini."
+   :"⚠️ Kuis sudah selesai di perangkat ini — tidak bisa diulang.";
+
+ $.warningBar.style.background = data.status==='LULUS'?"#dcfce7":"#fff7ed";
+ $.warningBar.style.borderColor = data.status==='LULUS'?"#22c55e":"#f59e0b";
+ $.warningBar.style.color = data.status==='LULUS'?"#166534":"#92400e";
+}
+
+// Screenshot
+$.btnScreenshot.addEventListener('click', ()=>{
+ html2canvas(D('capture-area')).then(canvas=>{
+   const link = document.createElement('a');
+   link.href = canvas.toDataURL('image/png');
+   link.download = 'hasil-kuis.png';
+   link.click();
+ });
+});
+
+// Share WA
+$.btnShareWA.addEventListener('click', ()=>{
+ const data = JSON.parse(localStorage.getItem('lifeQuizResult')||'{}');
+ const msg = `Halo! Berikut hasil kuis saya:\nNama: ${data.name}\nAbsen: ${data.nis}\nKelas: ${data.class}\nNilai: ${data.score}\nStatus: ${data.status}`;
+ window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
+});
+
+// Done button
+$.btnDone.addEventListener('click', ()=>alert("Terima kasih! Hasil tersimpan di perangkat ini."));
+</script>
+
+</body>
+</html>
