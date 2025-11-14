@@ -146,329 +146,287 @@
    Soal
    ========================= */
 const QUESTIONS = [
-  {
-    q: "**Masalah 1: Layar HP Tidak Merespon.** Andi sedang mencoba membuka aplikasi kamera, tetapi layar HP-nya tidak merespon ketika disentuh. Susun langkah yang benar untuk memastikan apakah masalahnya berasal dari hardware layar sentuh.",
-    items: [
-      "Coba bersihkan layar dari kotoran atau air",
-      "Restart HP untuk memulai ulang sistem",
-      "Tes bagian layar lain apakah bisa disentuh",
-      "Gunakan fitur 'Safe Mode' untuk memeriksa apakah ada aplikasi yang mengganggu"
-    ],
-    correct: [
-      "Coba bersihkan layar dari kotoran atau air",
-      "Tes bagian layar lain apakah bisa disentuh",
-      "Restart HP untuk memulai ulang sistem",
-      "Gunakan fitur 'Safe Mode' untuk memeriksa apakah ada aplikasi yang mengganggu"
-    ]
-  },
 
-  {
-    q: "**Masalah 2: Ketika Menekan Tombol Power, HP Tidak Menyala.** Bayu panik karena HP-nya tiba-tiba mati dan tidak mau menyala. Susun proses pengecekan hardware yang benar.",
-    items: [
-      "Periksa apakah baterai masih memiliki daya",
-      "Coba isi daya HP selama beberapa menit",
-      "Tekan lama tombol power 5–10 detik",
-      "Coba gunakan charger atau kabel lain"
-    ],
-    correct: [
-      "Periksa apakah baterai masih memiliki daya",
-      "Coba isi daya HP selama beberapa menit",
-      "Tekan lama tombol power 5–10 detik",
-      "Coba gunakan charger atau kabel lain"
-    ]
-  },
+{
+q: "**Masalah 1: Menghitung Total Penjualan Harian (SUM).**\nToko Donat Pak Jaya mencatat penjualan donat dalam tabel berikut:\n\n+------------+--------+\n| Rasa       | Jumlah |\n+------------+--------+\n| Coklat     |   25   |\n| Stroberi   |   18   |\n| Keju       |   30   |\n+------------+--------+\nDari tabel tersebut, hitung total semua donat yang terjual menggunakan fungsi SUM.",
+items:[
+"Klik sel tempat hasil akan ditampilkan",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter untuk melihat total"
+],
+correct:[
+"Klik sel tempat hasil akan ditampilkan",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter untuk melihat total"
+]
+},
 
-  {
-    q: "**Masalah 3: Proses Input pada Handphone.** Jika Sita mengetik pesan di HP menggunakan keyboard virtual, susun urutan proses yang benar di dalam sistem HP.",
-    items: [
-      "Sistem operasi menerima input dari layar sentuh",
-      "Layar menampilkan huruf yang ditekan",
-      "Sensor layar mendeteksi sentuhan jari",
-      "Prosesor memproses input untuk mengubahnya menjadi karakter"
-    ],
-    correct: [
-      "Sensor layar mendeteksi sentuhan jari",
-      "Sistem operasi menerima input dari layar sentuh",
-      "Prosesor memproses input untuk mengubahnya menjadi karakter",
-      "Layar menampilkan huruf yang ditekan"
-    ]
-  },
+{
+q: "**Masalah 2: Mencari Nilai Tertinggi (MAX).**\nBu Rani ingin mencari nilai tertinggi dari ujian matematika siswa.\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Andi    |  78   |\n| Budi    |  90   |\n| Siti    |  85   |\n+---------+-------+\nGunakan fungsi MAX untuk menentukan nilai tertinggi.",
+items:[
+"Klik sel tujuan",
+"Masukkan rumus =MAX(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel tujuan",
+"Masukkan rumus =MAX(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 4: HP Lemot Saat Dipakai Bermain Game.** Rino merasa HP-nya sangat lambat saat bermain game online. Susun langkah pengecekan hardware yang relevan.",
-    items: [
-      "Periksa kapasitas RAM apakah hampir penuh",
-      "Tutup aplikasi yang berjalan di latar belakang",
-      "Cek suhu HP apakah terlalu panas",
-      "Restart HP untuk menyegarkan memori"
-    ],
-    correct: [
-      "Periksa kapasitas RAM apakah hampir penuh",
-      "Tutup aplikasi yang berjalan di latar belakang",
-      "Cek suhu HP apakah terlalu panas",
-      "Restart HP untuk menyegarkan memori"
-    ]
-  },
+{
+q: "**Masalah 3: Menemukan Nilai Terendah (MIN).**\nPak Guru ingin mencari nilai terendah dari data berikut:\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Lala    |  95   |\n| Riko    |  80   |\n| Sari    |  88   |\n+---------+-------+\nGunakan MIN untuk menemukan nilai terkecil.",
+items:[
+"Klik sel kosong",
+"Ketik =MIN(B2:B4)",
+"Tekan Enter untuk hasil"
+],
+correct:[
+"Klik sel kosong",
+"Ketik =MIN(B2:B4)",
+"Tekan Enter untuk hasil"
+]
+},
 
-  {
-    q: "**Masalah 5: Kamera HP Buram.** Dara ingin mengambil foto tugas sekolah namun hasil kameranya buram. Susun langkah pengecekan hardware kamera.",
-    items: [
-      "Bersihkan lensa kamera dari debu",
-      "Cek apakah plastik pelindung lensa masih menempel",
-      "Tes kamera dengan aplikasi lain",
-      "Restart HP untuk memastikan sistem kamera normal"
-    ],
-    correct: [
-      "Bersihkan lensa kamera dari debu",
-      "Cek apakah plastik pelindung lensa masih menempel",
-      "Tes kamera dengan aplikasi lain",
-      "Restart HP untuk memastikan sistem kamera normal"
-    ]
-  },
+{
+q: "**Masalah 4: Menghitung Rata-Rata Nilai (AVERAGE).**\nSebuah kelas mengumpulkan nilai tugas berikut:\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Tono    |  70   |\n| Rio     |  85   |\n| Rani    |  90   |\n+---------+-------+\nGunakan AVERAGE untuk mencari nilai rata-rata.",
+items:[
+"Klik sel untuk menampilkan rata-rata",
+"Ketik =AVERAGE(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel untuk menampilkan rata-rata",
+"Ketik =AVERAGE(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  /* ================= SOFTWARE ================= */
+{
+q: "**Masalah 5: Menghitung Jumlah Siswa Lulus (COUNTIF).**\nNilai siswa berikut:\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Ani     |  78   |\n| Beni    |  60   |\n| Wati    |  82   |\n+---------+-------+\nHitung berapa siswa yang nilainya di atas 70.",
+items:[
+"Ketik =COUNTIF(B2:B4,\">70\")",
+"Klik sel tujuan",
+"Tekan Enter"
+],
+correct:[
+"Klik sel tujuan",
+"Ketik =COUNTIF(B2:B4,\">70\")",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 6: Aplikasi Tidak Bisa Dibuka.** Lala ingin membuka aplikasi edit foto, tetapi aplikasi langsung keluar. Susun langkah memperbaiki masalah software.",
-    items: [
-      "Tutup aplikasi dari recent apps",
-      "Hapus cache aplikasi",
-      "Update aplikasi ke versi terbaru",
-      "Restart HP untuk memuat ulang sistem"
-    ],
-    correct: [
-      "Tutup aplikasi dari recent apps",
-      "Hapus cache aplikasi",
-      "Update aplikasi ke versi terbaru",
-      "Restart HP untuk memuat ulang sistem"
-    ]
-  },
+{
+q: "**Masalah 6: Menentukan Lulus atau Tidak (IF).**\nNilai Andi adalah 75. Ketentuannya: minimal 70 untuk lulus.\nGunakan IF untuk menentukan status Andi.",
+items:[
+"Klik sel hasil",
+"Ketik =IF(75>=70,\"Lulus\",\"Tidak Lulus\")",
+"Tekan Enter"
+],
+correct:[
+"Klik sel hasil",
+"Ketik =IF(75>=70,\"Lulus\",\"Tidak Lulus\")",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 7: HP Tidak Bisa Install Aplikasi Baru.** Play Store menolak mengunduh aplikasi karena ‘Storage Full’. Susun langkah penanganannya.",
-    items: [
-      "Hapus file yang tidak dibutuhkan",
-      "Hapus aplikasi yang jarang digunakan",
-      "Pindahkan file ke penyimpanan cloud",
-      "Coba install ulang aplikasi setelah ada ruang"
-    ],
-    correct: [
-      "Hapus file yang tidak dibutuhkan",
-      "Hapus aplikasi yang jarang digunakan",
-      "Pindahkan file ke penyimpanan cloud",
-      "Coba install ulang aplikasi setelah ada ruang"
-    ]
-  },
+{
+q: "**Masalah 7: Menjumlahkan Data Transaksi (SUM).**\nWarung Bu Putri mencatat transaksi:\n\n+------------+--------+\n| Barang     | Jumlah |\n+------------+--------+\n| Teh        |   12   |\n| Kopi       |   10   |\n| Susu       |    8   |\n+------------+--------+\nGunakan SUM untuk menghitung total.",
+items:[
+"Ketik =SUM(B2:B4)",
+"Klik sel yang kosong",
+"Tekan Enter"
+],
+correct:[
+"Klik sel yang kosong",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 8: Perbedaan Kerja Hardware & Software Dalam Merekam Suara.** Ketika Fina merekam suara di kelas, susun urutan proses antara hardware dan software.",
-    items: [
-      "Aplikasi perekam menyimpan file audio di memori",
-      "Prosesor mengubah gelombang suara menjadi data digital",
-      "Mikrofon menangkap suara",
-      "Software perekam menampilkan gelombang suara"
-    ],
-    correct: [
-      "Mikrofon menangkap suara",
-      "Prosesor mengubah gelombang suara menjadi data digital",
-      "Software perekam menampilkan gelombang suara",
-      "Aplikasi perekam menyimpan file audio di memori"
-    ]
-  },
+{
+q: "**Masalah 8: Mencari Suhu Tertinggi (MAX).**\nStasiun cuaca mencatat suhu harian:\n\n+-----------+-------+\n| Hari      | Suhu  |\n+-----------+-------+\n| Senin     |  30   |\n| Selasa    |  32   |\n| Rabu      |  29   |\n+-----------+-------+\nTemukan suhu tertinggi dengan MAX.",
+items:[
+"Klik sel kosong",
+"Tekan Enter",
+"Ketik =MAX(B2:B4)"
+],
+correct:[
+"Klik sel kosong",
+"Ketik =MAX(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 9: HP Mengalami Crash Setelah Update.** Bima meng-update sistem dan HP menjadi sering restart sendiri.",
-    items: [
-      "Cek aplikasi apa yang tidak kompatibel",
-      "Clear cache sistem",
-      "Restart HP beberapa kali",
-      "Lakukan ‘Factory Reset’ jika masalah berlanjut"
-    ],
-    correct: [
-      "Cek aplikasi apa yang tidak kompatibel",
-      "Clear cache sistem",
-      "Restart HP beberapa kali",
-      "Lakukan ‘Factory Reset’ jika masalah berlanjut"
-    ]
-  },
+{
+q: "**Masalah 9: Menentukan Diskon (IF).**\nJika pembelian di atas 100 ribu dapat diskon, pembelian Ani adalah 120 ribu.\nGunakan IF.",
+items:[
+"Ketik =IF(120000>100000,\"Diskon\",\"Tidak\")",
+"Klik sel hasil",
+"Tekan Enter"
+],
+correct:[
+"Klik sel hasil",
+"Ketik =IF(120000>100000,\"Diskon\",\"Tidak\")",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 10: Keyboard HP Error.** Ketika mengetik, keyboard menutup sendiri. Susun langkah memperbaiki error software keyboard.",
-    items: [
-      "Hapus cache aplikasi keyboard",
-      "Update keyboard ke versi terbaru",
-      "Restart HP",
-      "Coba gunakan keyboard lain sementara"
-    ],
-    correct: [
-      "Hapus cache aplikasi keyboard",
-      "Update keyboard ke versi terbaru",
-      "Restart HP",
-      "Coba gunakan keyboard lain sementara"
-    ]
-  },
+{
+q: "**Masalah 10: Menghitung Rata-Rata Tinggi Badan (AVERAGE).**\n\n+---------+-------+\n| Nama    | TB    |\n+---------+-------+\n| Fina    | 150   |\n| Riko    | 160   |\n| Tesa    | 155   |\n+---------+-------+\nHitung rata-rata tinggi badan.",
+items:[
+"Klik sel kosong",
+"Tekan Enter",
+"Ketik =AVERAGE(B2:B4)"
+],
+correct:[
+"Klik sel kosong",
+"Ketik =AVERAGE(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  /* ================= EXCEL ================= */
+{
+q: "**Masalah 11: Menghitung Produk Terjual (COUNT).**\nTabel stok barang:\n\n+-------------+--------+\n| Barang      | Stok   |\n+-------------+--------+\n| Sabun       |   10   |\n| Sampo       |   15   |\n| Pasta Gigi  |    8   |\n+-------------+--------+\nHitung jumlah baris data menggunakan COUNT.",
+items:[
+"Ketik =COUNT(B2:B4)",
+"Klik sel tujuan",
+"Tekan Enter"
+],
+correct:[
+"Klik sel tujuan",
+"Ketik =COUNT(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 11: Menghitung Total Pengeluaran.** Dina mencatat pengeluaran jajan selama seminggu di Excel. Susun langkah menggunakan fungsi SUM.",
-    items: [
-      "Blok semua sel pengeluaran",
-      "Klik fungsi SUM",
-      "Tekan Enter untuk menampilkan hasil",
-      "Pastikan angka sudah diisi dengan benar"
-    ],
-    correct: [
-      "Pastikan angka sudah diisi dengan benar",
-      "Blok semua sel pengeluaran",
-      "Klik fungsi SUM",
-      "Tekan Enter untuk menampilkan hasil"
-    ]
-  },
+{
+q: "**Masalah 12: Menjumlahkan Berat Buah (SUM).**\n\n+---------+--------+\n| Buah     | Kg     |\n+---------+--------+\n| Apel     |  5     |\n| Mangga   |  7     |\n| Jeruk    |  4     |\n+---------+--------+\nHitung total berat buah.",
+items:[
+"Klik sel hasil",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel hasil",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 12: Mencari Nilai Tertinggi.** Guru meminta Rafi mencari nilai tertinggi kelas di Excel. Susun langkah menggunakan fungsi MAX.",
-    items: [
-      "Blok seluruh data nilai",
-      "Pilih fungsi MAX",
-      "Tekan Enter untuk melihat hasil",
-      "Periksa apakah semua data sudah benar"
-    ],
-    correct: [
-      "Periksa apakah semua data sudah benar",
-      "Blok seluruh data nilai",
-      "Pilih fungsi MAX",
-      "Tekan Enter untuk melihat hasil"
-    ]
-  },
+{
+q: "**Masalah 13: Menentukan Nilai Minimum (MIN).**\n\n+---------+-------+\n| Siswa   | Nilai |\n+---------+-------+\n| Joko    |  88   |\n| Putri   |  92   |\n| Wawan   |  75   |\n+---------+-------+\nCari nilai terendah.",
+items:[
+"Ketik =MIN(B2:B4)",
+"Klik sel kosong",
+"Tekan Enter"
+],
+correct:[
+"Klik sel kosong",
+"Ketik =MIN(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 13: Menentukan Lulus/Tidak.** Guru ingin menentukan siswa lulus (≥75) atau tidak menggunakan fungsi IF.",
-    items: [
-      "Masukkan rumus IF pada kolom status",
-      "=IF(nilai>=75,\"Lulus\",\"Tidak Lulus\")",
-      "Blok sel nilai siswa",
-      "Tekan Enter untuk menerapkan rumus"
-    ],
-    correct: [
-      "Blok sel nilai siswa",
-      "Masukkan rumus IF pada kolom status",
-      "=IF(nilai>=75,\"Lulus\",\"Tidak Lulus\")",
-      "Tekan Enter untuk menerapkan rumus"
-    ]
-  },
+{
+q: "**Masalah 14: Menentukan Bonus (IF).**\nKaryawan mendapat bonus jika kehadiran lebih dari 20 hari. Kehadiran Ria: 22.\nGunakan IF.",
+items:[
+"Klik sel hasil",
+"Ketik =IF(22>20,\"Bonus\",\"Tidak\")",
+"Tekan Enter"
+],
+correct:[
+"Klik sel hasil",
+"Ketik =IF(22>20,\"Bonus\",\"Tidak\")",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 14: Menghitung Rata-rata Ulangan.** Siswa diminta mencari nilai rata-rata ulangan harian menggunakan fungsi AVERAGE.",
-    items: [
-      "Pastikan semua nilai sudah terisi",
-      "Blok kolom nilai",
-      "Pilih fungsi AVERAGE",
-      "Tekan Enter"
-    ],
-    correct: [
-      "Pastikan semua nilai sudah terisi",
-      "Blok kolom nilai",
-      "Pilih fungsi AVERAGE",
-      "Tekan Enter"
-    ]
-  },
+{
+q: "**Masalah 15: Menghitung Rata-Rata Uang Saku (AVERAGE).**\n\n+---------+--------+\n| Hari    | Uang   |\n+---------+--------+\n| Senin   | 15000  |\n| Selasa  | 20000  |\n| Rabu    | 10000  |\n+---------+--------+\nHitung rata-rata uang saku.",
+items:[
+"Klik sel kosong",
+"Ketik =AVERAGE(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel kosong",
+"Ketik =AVERAGE(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 15: Menandai Siswa Remedial.** Guru ingin menandai siswa dengan nilai < 60 sebagai 'Remedial' menggunakan IF.",
-    items: [
-      "Blok nilai siswa",
-      "Masukkan rumus IF",
-      "=IF(nilai<60,\"Remedial\",\"Aman\")",
-      "Tekan Enter"
-    ],
-    correct: [
-      "Blok nilai siswa",
-      "Masukkan rumus IF",
-      "=IF(nilai<60,\"Remedial\",\"Aman\")",
-      "Tekan Enter"
-    ]
-  },
+{
+q: "**Masalah 16: Menjumlahkan Pengeluaran (SUM).**\n\n+-------------+----------+\n| Kebutuhan   | Biaya    |\n+-------------+----------+\n| Transport   | 20000    |\n| Makan       | 25000    |\n| Jajan       | 15000    |\n+-------------+----------+\nJumlahkan semua biaya.",
+items:[
+"Klik sel hasil",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel hasil",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 16: Menghitung Diskon Belanja di Excel.** Toko memberikan diskon 10%. Susun langkah perhitungannya.",
-    items: [
-      "Masukkan harga awal",
-      "Gunakan rumus =harga*10%",
-      "Kurangi harga awal dengan hasil diskon",
-      "Tampilkan harga akhir"
-    ],
-    correct: [
-      "Masukkan harga awal",
-      "Gunakan rumus =harga*10%",
-      "Kurangi harga awal dengan hasil diskon",
-      "Tampilkan harga akhir"
-    ]
-  },
+{
+q: "**Masalah 17: Mencari Nilai Tertinggi (MAX).**\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Nani    |  65   |\n| Rara    |  88   |\n| Mika    |  90   |\n+---------+-------+\nCari nilai terbesar.",
+items:[
+"Klik sel tujuan",
+"Ketik =MAX(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel tujuan",
+"Ketik =MAX(B2:B4)",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 17: Mengecek Apakah Angka Genap.** Irfan ingin memeriksa apakah sebuah angka di Excel bernilai genap menggunakan rumus logika.",
-    items: [
-      "Gunakan rumus =IF(MOD(angka,2)=0,\"Genap\",\"Ganjil\")",
-      "Masukkan angka ke sel",
-      "Tekan Enter",
-      "Blok sel untuk menerapkan rumus"
-    ],
-    correct: [
-      "Masukkan angka ke sel",
-      "Gunakan rumus =IF(MOD(angka,2)=0,\"Genap\",\"Ganjil\")",
-      "Tekan Enter",
-      "Blok sel untuk menerapkan rumus"
-    ]
-  },
+{
+q: "**Masalah 18: Menghitung Jumlah Nilai ≥ 80 (COUNTIF).**\n\n+---------+-------+\n| Nama    | Nilai |\n+---------+-------+\n| Sasa    |  82   |\n| Fina    |  70   |\n| Dodi    |  90   |\n+---------+-------+\nHitung berapa siswa yang nilainya ≥ 80.",
+items:[
+"Klik sel kosong",
+"Tekan Enter",
+"Ketik =COUNTIF(B2:B4,\">=80\")"
+],
+correct:[
+"Klik sel kosong",
+"Ketik =COUNTIF(B2:B4,\">=80\")",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 18: Menjumlahkan Hanya Angka Positif.** Guru meminta menjumlahkan hanya nilai positif menggunakan fungsi SUMIF.",
-    items: [
-      "Blok kolom nilai",
-      "Gunakan fungsi SUMIF",
-      "Masukkan kriteria '>0'",
-      "Tekan Enter untuk mendapatkan jumlah"
-    ],
-    correct: [
-      "Blok kolom nilai",
-      "Gunakan fungsi SUMIF",
-      "Masukkan kriteria '>0'",
-      "Tekan Enter untuk mendapatkan jumlah"
-    ]
-  },
+{
+q: "**Masalah 19: Menentukan Status Stok (IF).**\nJika stok < 5 maka 'Habis', jika tidak 'Tersedia'. Stok apel: 3.\nGunakan IF.",
+items:[
+"Klik sel hasil",
+"Ketik =IF(3<5,\"Habis\",\"Tersedia\")",
+"Tekan Enter"
+],
+correct:[
+"Klik sel hasil",
+"Ketik =IF(3<5,\"Habis\",\"Tersedia\")",
+"Tekan Enter"
+]
+},
 
-  {
-    q: "**Masalah 19: Mengurutkan Nilai dari Tertinggi.** Excel digunakan untuk mengurutkan nilai kelas. Susun langkahnya.",
-    items: [
-      "Blok seluruh data nilai",
-      "Klik Sort & Filter",
-      "Pilih 'Sort Largest to Smallest'",
-      "Periksa hasil pengurutan"
-    ],
-    correct: [
-      "Blok seluruh data nilai",
-      "Klik Sort & Filter",
-      "Pilih 'Sort Largest to Smallest'",
-      "Periksa hasil pengurutan"
-    ]
-  },
+{
+q: "**Masalah 20: Menghitung Total Nilai (SUM).**\n\n+---------+-------+\n| Tugas   | Nilai |\n+---------+-------+\n| Tugas 1 |  80   |\n| Tugas 2 |  90   |\n| Tugas 3 |  85   |\n+---------+-------+\nGunakan SUM untuk menjumlahkan semua nilai.",
+items:[
+"Klik sel tujuan",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+],
+correct:[
+"Klik sel tujuan",
+"Ketik =SUM(B2:B4)",
+"Tekan Enter"
+]
+}
 
-  {
-    q: "**Masalah 20: Menghitung Bonus Pegawai.** Perusahaan memberi bonus jika jam kerja > 160 jam. Gunakan IF untuk menentukan bonus.",
-    items: [
-      "Masukkan data jam kerja",
-      "Gunakan rumus =IF(jam>160,\"Bonus\",\"Tidak\")",
-      "Tekan Enter",
-      "Blok sel untuk menerapkan ke baris lain"
-    ],
-    correct: [
-      "Masukkan data jam kerja",
-      "Gunakan rumus =IF(jam>160,\"Bonus\",\"Tidak\")",
-      "Tekan Enter",
-      "Blok sel untuk menerapkan ke baris lain"
-    ]
-  }
 ];
 
 /* =========================
