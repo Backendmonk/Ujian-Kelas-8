@@ -148,415 +148,406 @@
 const QUESTIONS = [
 
 {
-q: "**Masalah 1: Menghitung Total Donat Terjual (SUM).**\nToko Donat Pak Jaya mencatat penjualan harian dalam tabel berikut:\n\n\
-+------------+--------+\n\
-| Rasa       | Jumlah |\n\
-+------------+--------+\n\
-| Coklat     |   25   |\n\
-| Stroberi   |   18   |\n\
-| Keju       |   30   |\n\
-+------------+--------+\n\
-Hitung total seluruh donat yang terjual.",
-items:[
-"Klik sel tempat total akan ditampilkan",
-"Ketik rumus =SUM(B2:B4)",
+q: "**Masalah 1: Menghitung Total Konsumsi Energi Mesin Produksi (SUM).**\nDi sebuah pabrik tekstil, setiap mesin pencelupan kain mencatat konsumsi listrik per jam. Supervisor produksi ingin mengetahui total konsumsi energi harian untuk laporan efisiensi. Kamu diminta menyusun langkah Excel untuk menghitung total energi.\n\n+-------------------+----------------+\n| Mesin             | kWh per Jam    |\n+-------------------+----------------+\n|                   |                |\n|                   |                |\n+-------------------+----------------+\n\nSusun langkah teknis penggunaan SUM.",
+items: [
+"Masukkan rentang kWh ke dalam fungsi",
+"Pilih sel untuk total energi",
+"Gunakan fungsi =SUM()",
+"Tekan Enter untuk menghasilkan total",
+"Ketik tanda sama dengan (=)",
+"Blok seluruh data konsumsi energi"
+],
+correct: [
+"Pilih sel untuk total energi",
+"Ketik tanda sama dengan (=)",
+"Gunakan fungsi =SUM()",
+"Masukkan rentang kWh ke dalam fungsi",
+"Blok seluruh data konsumsi energi",
+"Tekan Enter untuk menghasilkan total"
+]
+},
+
+{
+q: "**Masalah 2: Menentukan Mesin dengan Efisiensi Terburuk (MIN).**\nTim maintenance ingin mengetahui mesin dengan output terendah dalam satu shift. Data output dicatat dalam tabel berikut:\n\n+---------------+--------------+\n| Mesin         | Output (kg)  |\n+---------------+--------------+\n|               |              |\n|               |              |\n+---------------+--------------+\n\nSusun langkah untuk mendapatkan nilai minimum secara teknis.",
+items: [
+"Pilih sel tempat nilai minimum ditampilkan",
+"Ketik (=)",
+"Gunakan fungsi =MIN()",
+"Masukkan rentang output",
+"Blok semua nilai output",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel tempat total akan ditampilkan",
-"Ketik rumus =SUM(B2:B4)",
+correct: [
+"Pilih sel tempat nilai minimum ditampilkan",
+"Ketik (=)",
+"Gunakan fungsi =MIN()",
+"Masukkan rentang output",
+"Blok semua nilai output",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 2: Mencari Nilai Ujian Tertinggi (MAX).**\nPak Guru ingin mengetahui nilai tertinggi dari ujian matematika.\n\n\
-+---------+-------+\n\
-| Nama    | Nilai |\n\
-+---------+-------+\n\
-| Andi    |  78   |\n\
-| Budi    |  90   |\n\
-| Siti    |  85   |\n\
-+---------+-------+\n\
-Gunakan fungsi MAX.",
-items:[
-"Klik sel hasil",
-"Ketik =MAX(B2:B4)",
+q: "**Masalah 3: Menentukan Suhu Maksimum Laboratorium (MAX).**\nLaboratorium kimia mencatat suhu reaktor setiap jam untuk memastikan suhu tidak melebihi batas aman.\n\n+--------------+-------------+\n| Waktu        | Suhu (°C)   |\n+--------------+-------------+\n|              |             |\n|              |             |\n+--------------+-------------+\n\nSusun prosedur Excel untuk mendapatkan suhu tertinggi.",
+items: [
+"Masukkan rentang suhu ke fungsi",
+"Pilih sel hasil maksimum",
+"Gunakan fungsi =MAX()",
+"Blok seluruh kolom suhu",
+"Ketik (=)",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =MAX(B2:B4)",
+correct: [
+"Pilih sel hasil maksimum",
+"Ketik (=)",
+"Gunakan fungsi =MAX()",
+"Masukkan rentang suhu ke fungsi",
+"Blok seluruh kolom suhu",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 3: Menentukan Nilai Terendah (MIN).**\nBu Rani ingin mencari nilai yang paling kecil dari daftar nilai berikut:\n\n\
-+---------+-------+\n\
-| Nama    | Nilai |\n\
-+---------+-------+\n\
-| Riko    |  80   |\n\
-| Lala    |  95   |\n\
-| Sari    |  88   |\n\
-+---------+-------+\n\
-Gunakan MIN untuk menemukan nilai terendah.",
-items:[
-"Klik sel kosong",
-"Ketik =MIN(B2:B4)",
+q: "**Masalah 4: Menghitung Rata-Rata Tingkat Error Barcode Gudang (AVERAGE).**\nSebuah gudang logistik ingin mengetahui rata-rata tingkat error scanner barcode.\n\n+--------------------+------------------+\n| Scanner            | Error (%)        |\n+--------------------+------------------+\n|                    |                  |\n|                    |                  |\n+--------------------+------------------+\n\nSusun langkah AVERAGE pada kasus teknis ini.",
+items: [
+"Pilih sel untuk rata-rata error",
+"Ketik (=)",
+"Masukkan rentang error ke fungsi",
+"Gunakan fungsi =AVERAGE()",
+"Blok seluruh kolom error",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel kosong",
-"Ketik =MIN(B2:B4)",
+correct: [
+"Pilih sel untuk rata-rata error",
+"Ketik (=)",
+"Gunakan fungsi =AVERAGE()",
+"Masukkan rentang error ke fungsi",
+"Blok seluruh kolom error",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 4: Rata-Rata Nilai Tugas (AVERAGE).**\nKelas 8A mencatat nilai tugas sebagai berikut:\n\n\
-+---------+-------+\n\
-| Nama    | Nilai |\n\
-+---------+-------+\n\
-| Tono    |  70   |\n\
-| Rio     |  85   |\n\
-| Rani    |  90   |\n\
-+---------+-------+\n\
-Hitung nilai rata-rata.",
-items:[
-"Klik sel hasil",
-"Ketik =AVERAGE(B2:B4)",
+q: "**Masalah 5: Kelayakan Produk Berdasarkan Standar Kualitas (IF).**\nQC (Quality Control) ingin menentukan apakah kadar air pada sampel produk memenuhi standar (< 12%).\n\n+------------------+---------------------+\n| Sampel Produk    | Kadar Air (%)       |\n+------------------+---------------------+\n|                  |                     |\n|                  |                     |\n+------------------+---------------------+\n\nGunakan IF untuk menampilkan 'Layak' atau 'Tidak Layak'.",
+items: [
+"Masukkan syarat <12",
+"Pilih sel hasil kelayakan",
+"Ketik (=)",
+"Masukkan output 'Layak' dan 'Tidak Layak'",
+"Gunakan fungsi =IF()",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =AVERAGE(B2:B4)",
+correct: [
+"Pilih sel hasil kelayakan",
+"Ketik (=)",
+"Gunakan fungsi =IF()",
+"Masukkan syarat <12",
+"Masukkan output 'Layak' dan 'Tidak Layak'",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 5: Menghitung Siswa yang Lulus (COUNTIF).**\nKriteria kelulusan: nilai > 70.\n\n\
-+---------+-------+\n\
-| Nama    | Nilai |\n\
-+---------+-------+\n\
-| Ani     |  78   |\n\
-| Beni    |  60   |\n\
-| Wati    |  82   |\n\
-+---------+-------+\n\
-Hitung jumlah siswa yang lulus.",
-items:[
-"Klik sel tujuan",
-"Ketik =COUNTIF(B2:B4,\">70\")",
+q: "**Masalah 6: Menghitung Jumlah Sensor yang Memberikan Sinyal (COUNT).**\nServer IoT mencatat sinyal masuk dari berbagai sensor. Hanya sensor aktif yang memiliki nilai.\n\n+---------------+---------------+\n| Sensor        | Status Sinyal |\n+---------------+---------------+\n|               |               |\n|               |               |\n+---------------+---------------+\n\nGunakan COUNT untuk menghitung sensor aktif.",
+items: [
+"Ketik (=)",
+"Blok seluruh kolom status",
+"Gunakan fungsi =COUNT()",
+"Pilih sel keluaran jumlah",
+"Masukkan rentang status",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel tujuan",
-"Ketik =COUNTIF(B2:B4,\">70\")",
+correct: [
+"Pilih sel keluaran jumlah",
+"Ketik (=)",
+"Gunakan fungsi =COUNT()",
+"Masukkan rentang status",
+"Blok seluruh kolom status",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 6: Menentukan Status Lulus (IF).**\nNilai Dimas adalah 75. Standar kelulusan: minimal 70.\nGunakan IF untuk menentukan status.",
-items:[
-"Klik sel hasil",
-"Ketik =IF(75>=70,\"Lulus\",\"Tidak Lulus\")",
+q: "**Masalah 7: Total Beban Jaringan Server (SUM).**\nDivisi IT ingin menjumlahkan beban bandwidth server dari berbagai aplikasi.\n\n+----------------+-------------+\n| Aplikasi       | Bandwidth   |\n+----------------+-------------+\n|                |             |\n|                |             |\n+----------------+-------------+\n\nGunakan SUM.",
+items: [
+"Ketik (=)",
+"Gunakan fungsi =SUM()",
+"Masukkan rentang bandwidth",
+"Pilih sel total",
+"Blok seluruh kolom bandwidth",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =IF(75>=70,\"Lulus\",\"Tidak Lulus\")",
+correct: [
+"Pilih sel total",
+"Ketik (=)",
+"Gunakan fungsi =SUM()",
+"Masukkan rentang bandwidth",
+"Blok seluruh kolom bandwidth",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 7: Menjumlahkan Berat Buah (SUM).**\nToko buah mencatat data berikut:\n\n\
-+---------+--------+\n\
-| Buah    | Kg     |\n\
-+---------+--------+\n\
-| Apel    |   5    |\n\
-| Mangga  |   7    |\n\
-| Jeruk   |   4    |\n\
-+---------+--------+\n\
-Hitung total berat semua buah.",
-items:[
-"Klik sel hasil",
-"Ketik =SUM(B2:B4)",
+q: "**Masalah 8: Mencari Performa Sales Tertinggi (MAX).**\nPerusahaan ingin mengetahui siapa sales dengan performa tertinggi.\n\n+--------------+------------+\n| Sales        | Closing    |\n+--------------+------------+\n|              |            |\n|              |            |\n+--------------+------------+\n\nGunakan MAX secara teknis.",
+items: [
+"Masukkan rentang closing",
+"Ketik (=)",
+"Gunakan =MAX()",
+"Pilih sel output",
+"Blok data closing",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =SUM(B2:B4)",
+correct: [
+"Pilih sel output",
+"Ketik (=)",
+"Gunakan =MAX()",
+"Masukkan rentang closing",
+"Blok data closing",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 8: Suhu Tertinggi Mingguan (MAX).**\n\n\
-+-----------+-------+\n\
-| Hari      | Suhu  |\n\
-+-----------+-------+\n\
-| Senin     |  30   |\n\
-| Selasa    |  32   |\n\
-| Rabu      |  29   |\n\
-+-----------+-------+\n\
-Gunakan MAX untuk menemukan suhu tertinggi.",
-items:[
-"Klik sel kosong",
-"Ketik =MAX(B2:B4)",
+q: "**Masalah 9: Nilai Minimum Tegangan Listrik (MIN).**\nTeknisi panel ingin mencari tegangan paling rendah dari log monitoring.\n\n+---------------+---------------+\n| Waktu         | Tegangan (V)  |\n+---------------+---------------+\n|               |               |\n|               |               |\n+---------------+---------------+\n\nGunakan MIN.",
+items: [
+"Pilih sel keluaran",
+"Masukkan rentang tegangan",
+"Ketik (=)",
+"Gunakan =MIN()",
+"Blok seluruh kolom tegangan",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel kosong",
-"Ketik =MAX(B2:B4)",
+correct: [
+"Pilih sel keluaran",
+"Ketik (=)",
+"Gunakan =MIN()",
+"Masukkan rentang tegangan",
+"Blok seluruh kolom tegangan",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 9: Diskon Belanja (IF).**\nJika belanja > 100.000 mendapatkan diskon. Total belanja Sinta: 120.000.",
-items:[
-"Klik sel hasil",
-"Ketik =IF(120000>100000,\"Diskon\",\"Tidak\")",
+q: "**Masalah 10: Rata-Rata Waktu Response Server (AVERAGE).**\nTim backend mengukur rata-rata waktu respons server.\n\n+----------------+------------------+\n| Request        | Response (ms)    |\n+----------------+------------------+\n|                |                  |\n|                |                  |\n+----------------+------------------+\n\nGunakan AVERAGE.",
+items: [
+"Pilih sel rata-rata",
+"Gunakan =AVERAGE()",
+"Ketik (=)",
+"Masukkan rentang respons",
+"Blok kolom respons",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =IF(120000>100000,\"Diskon\",\"Tidak\")",
+correct: [
+"Pilih sel rata-rata",
+"Ketik (=)",
+"Gunakan =AVERAGE()",
+"Masukkan rentang respons",
+"Blok kolom respons",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 10: Rata-Rata Tinggi Badan (AVERAGE).**\n\n\
-+---------+-------+\n\
-| Nama    | TB    |\n\
-+---------+-------+\n\
-| Fina    | 150   |\n\
-| Riko    | 160   |\n\
-| Tesa    | 155   |\n\
-+---------+-------+\n\
-Hitung rata-rata tinggi badan.",
-items:[
-"Klik sel tujuan",
-"Ketik =AVERAGE(B2:B4)",
+q: "**Masalah 11: Menentukan Karyawan Berhak Insentif (IF).**\nHRD memberikan insentif jika absensi ≥ 95%.\n\n+---------------+-------------+\n| Karyawan      | Absensi %   |\n+---------------+-------------+\n|               |             |\n|               |             |\n+---------------+-------------+\n\nGunakan IF.",
+items: [
+"Masukkan kondisi output",
+"Ketik (=)",
+"Pilih sel status insentif",
+"Gunakan =IF()",
+"Masukkan syarat >=95%",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel tujuan",
-"Ketik =AVERAGE(B2:B4)",
+correct: [
+"Pilih sel status insentif",
+"Ketik (=)",
+"Gunakan =IF()",
+"Masukkan syarat >=95%",
+"Masukkan kondisi output",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 11: Menghitung Jumlah Data (COUNT).**\n\n\
-+-------------+--------+\n\
-| Barang      | Stok   |\n\
-+-------------+--------+\n\
-| Sabun       |  10    |\n\
-| Sampo       |  15    |\n\
-| Pasta Gigi  |   8    |\n\
-+-------------+--------+\n\
-Hitung jumlah baris data stok.",
-items:[
-"Klik sel hasil",
-"Ketik =COUNT(B2:B4)",
+q: "**Masalah 12: Hitung Jumlah Data Sensor Valid (COUNT).**\nTim IoT ingin menghitung jumlah sensor yang memberikan data valid (bernilai angka).\n\n+--------------+--------------+\n| Sensor       | Data         |\n+--------------+--------------+\n|              |              |\n|              |              |\n+--------------+--------------+\n\nGunakan COUNT.",
+items: [
+"Pilih sel hasil",
+"Ketik (=)",
+"Gunakan =COUNT()",
+"Masukkan rentang data",
+"Blok kolom data",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =COUNT(B2:B4)",
+correct: [
+"Pilih sel hasil",
+"Ketik (=)",
+"Gunakan =COUNT()",
+"Masukkan rentang data",
+"Blok kolom data",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 12: Total Biaya Harian (SUM).**\n\n\
-+-------------+----------+\n\
-| Kebutuhan   | Biaya    |\n\
-+-------------+----------+\n\
-| Transport   | 20000    |\n\
-| Makan       | 25000    |\n\
-| Jajan       | 15000    |\n\
-+-------------+----------+\n\
-Hitung total pengeluaran.",
-items:[
-"Klik sel kosong",
-"Ketik =SUM(B2:B4)",
+q: "**Masalah 13: Total Beban Kerja CPU VM (SUM).**\nAdmin server melakukan analisis beban kerja CPU dalam persentase.\n\n+------------+-----------+\n| VM         | CPU (%)   |\n+------------+-----------+\n|            |           |\n|            |           |\n+------------+-----------+\n\nGunakan SUM.",
+items: [
+"Ketik (=)",
+"Gunakan =SUM()",
+"Pilih sel total",
+"Masukkan rentang CPU",
+"Blok seluruh kolom CPU",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel kosong",
-"Ketik =SUM(B2:B4)",
+correct: [
+"Pilih sel total",
+"Ketik (=)",
+"Gunakan =SUM()",
+"Masukkan rentang CPU",
+"Blok seluruh kolom CPU",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 13: Nilai Minimum Kelas (MIN).**\n\n\
-+---------+-------+\n\
-| Siswa   | Nilai |\n\
-+---------+-------+\n\
-| Joko    |  88   |\n\
-| Putri   |  92   |\n\
-| Wawan   |  75   |\n\
-+---------+-------+\n\
-Cari nilai terendah.",
-items:[
-"Klik sel hasil",
-"Ketik =MIN(B2:B4)",
+q: "**Masalah 14: Output Sensor Tertinggi (MAX).**\nSebuah drone penelitian mencatat intensitas cahaya.\n\n+----------------+--------------+\n| Waktu          | Intensitas   |\n+----------------+--------------+\n|                |              |\n|                |              |\n+----------------+--------------+\n\nGunakan MAX.",
+items: [
+"Masukkan rentang intensitas",
+"Gunakan =MAX()",
+"Ketik (=)",
+"Pilih sel hasil",
+"Blok data intensitas",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =MIN(B2:B4)",
+correct: [
+"Pilih sel hasil",
+"Ketik (=)",
+"Gunuse =MAX()",
+"Masukkan rentang intensitas",
+"Blok data intensitas",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 14: Menentukan Bonus Kehadiran (IF).**\nKaryawan mendapat bonus jika hadir lebih dari 20 hari.\nKehadiran Ria: 22.",
-items:[
-"Klik sel hasil",
-"Ketik =IF(22>20,\"Bonus\",\"Tidak\")",
+q: "**Masalah 15: Nilai Terendah Kualitas Air (MIN).**\nTim lingkungan memantau kadar pH.\n\n+--------------+--------------+\n| Titik Pantau | pH           |\n+--------------+--------------+\n|              |              |\n|              |              |\n+--------------+--------------+\n\nGunakan MIN.",
+items: [
+"Ketik (=)",
+"Masukkan rentang pH",
+"Pilih sel hasil terendah",
+"Gunakan =MIN()",
+"Blok kolom pH",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =IF(22>20,\"Bonus\",\"Tidak\")",
+correct: [
+"Pilih sel hasil terendah",
+"Ketik (=)",
+"Gunakan =MIN()",
+"Masukkan rentang pH",
+"Blok kolom pH",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 15: Rata-Rata Uang Saku Mingguan (AVERAGE).**\n\n\
-+---------+--------+\n\
-| Hari    | Uang   |\n\
-+---------+--------+\n\
-| Senin   | 15000  |\n\
-| Selasa  | 20000  |\n\
-| Rabu    | 10000  |\n\
-+---------+--------+\n\
-Hitung rata-rata.",
-items:[
-"Klik sel hasil",
-"Ketik =AVERAGE(B2:B4)",
+q: "**Masalah 16: Rata-Rata Suhu Reaktor (AVERAGE).**\nInsinyur kimia ingin menghitung rata-rata suhu operasi reaktor.\n\n+--------------+-------------+\n| Jam          | Suhu (°C)   |\n+--------------+-------------+\n|              |             |\n|              |             |\n+--------------+-------------+\n\nGunakan AVERAGE.",
+items: [
+"Masukkan rentang suhu",
+"Gunakan =AVERAGE()",
+"Pilih sel output",
+"Blok kolom suhu",
+"Ketik (=)",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =AVERAGE(B2:B4)",
+correct: [
+"Pilih sel output",
+"Ketik (=)",
+"Gunakan =AVERAGE()",
+"Masukkan rentang suhu",
+"Blok kolom suhu",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 16: Total Nilai Tugas (SUM).**\n\n\
-+---------+-------+\n\
-| Tugas   | Nilai |\n\
-+---------+-------+\n\
-| Tugas 1 |  80   |\n\
-| Tugas 2 |  90   |\n\
-| Tugas 3 |  85   |\n\
-+---------+-------+\n\
-Hitung total nilai.",
-items:[
-"Klik sel tujuan",
-"Ketik =SUM(B2:B4)",
+q: "**Masalah 17: Menentukan Status Alarm (IF).**\nSensor kebocoran gas memberi status ALARM jika kondisi ≥ 8 ppm.\n\n+-------------+-------------+\n| Lokasi      | ppm         |\n+-------------+-------------+\n|             |             |\n|             |             |\n+-------------+-------------+\n\nGunakan IF.",
+items: [
+"Pilih sel status alarm",
+"Ketik (=)",
+"Gunakan =IF()",
+"Masukkan syarat >=8",
+"Masukkan output 'ALARM' dan 'AMAN'",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel tujuan",
-"Ketik =SUM(B2:B4)",
+correct: [
+"Pilih sel status alarm",
+"Ketik (=)",
+"Gunakan =IF()",
+"Masukkan syarat >=8",
+"Masukkan output 'ALARM' dan 'AMAN'",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 17: Nilai Maksimum (MAX).**\n\n\
-+---------+-------+\n\
-| Nama    | Nilai |\n\
-+---------+-------+\n\
-| Nani    |  65   |\n\
-| Rara    |  88   |\n\
-| Mika    |  90   |\n\
-+---------+-------+\n\
-Gunakan MAX untuk cari nilai tertinggi.",
-items:[
-"Klik sel hasil",
-"Ketik =MAX(B2:B4)",
+q: "**Masalah 18: Hitung Perangkat yang Online (COUNT).**\nSebuah router mencatat perangkat dengan status IP aktif.\n\n+-------------+--------------+\n| Device      | Status       |\n+-------------+--------------+\n|             |              |\n|             |              |\n+-------------+--------------+\n\nGunakan COUNT.",
+items: [
+"Blok kolom status",
+"Masukkan rentang status",
+"Ketik (=)",
+"Pilih sel hasil online",
+"Gunakan =COUNT()",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =MAX(B2:B4)",
+correct: [
+"Pilih sel hasil online",
+"Ketik (=)",
+"Gunakan =COUNT()",
+"Masukkan rentang status",
+"Blok kolom status",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 18: Hitung Nilai ≥ 80 (COUNTIF).**\n\n\
-+---------+-------+\n\
-| Nama    | Nilai |\n\
-+---------+-------+\n\
-| Sasa    |  82   |\n\
-| Fina    |  70   |\n\
-| Dodi    |  90   |\n\
-+---------+-------+\n\
-Hitung siswa dengan nilai ≥ 80.",
-items:[
-"Klik sel kosong",
-"Ketik =COUNTIF(B2:B4,\">=80\")",
+q: "**Masalah 19: Total Kecepatan Download (SUM).**\nTeknisi ISP mengukur kecepatan download beberapa server edge.\n\n+------------+------------------+\n| Server     | Mbps             |\n+------------+------------------+\n|            |                  |\n|            |                  |\n+------------+------------------+\n\nGunakan SUM.",
+items: [
+"Ketik (=)",
+"Pilih sel total",
+"Gunakan =SUM()",
+"Masukkan rentang Mbps",
+"Blok semua nilai Mbps",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel kosong",
-"Ketik =COUNTIF(B2:B4,\">=80\")",
+correct: [
+"Pilih sel total",
+"Ketik (=)",
+"Gunakan =SUM()",
+"Masukkan rentang Mbps",
+"Blok semua nilai Mbps",
 "Tekan Enter"
 ]
 },
 
 {
-q: "**Masalah 19: Status Stok (IF).**\nJika stok < 5 maka 'Habis'. Stok apel: 3.",
-items:[
-"Klik sel hasil",
-"Ketik =IF(3<5,\"Habis\",\"Tersedia\")",
+q: "**Masalah 20: Nilai Maksimum Beban Robot Industri (MAX).**\nRobot industri mencatat beban angkat per operasi.\n\n+-------------+-------------+\n| Operasi     | Beban (kg)  |\n+-------------+-------------+\n|             |             |\n|             |             |\n+-------------+-------------+\n\nGunakan MAX.",
+items: [
+"Gunakan =MAX()",
+"Ketik (=)",
+"Pilih sel hasil maksimum",
+"Masukkan rentang beban",
+"Blok kolom beban",
 "Tekan Enter"
 ],
-correct:[
-"Klik sel hasil",
-"Ketik =IF(3<5,\"Habis\",\"Tersedia\")",
-"Tekan Enter"
-]
-},
-
-{
-q: "**Masalah 20: Total Perolehan Nilai (SUM).**\n\n\
-+---------+-------+\n\
-| Tugas   | Nilai |\n\
-+---------+-------+\n\
-| Quiz    |  85   |\n\
-| UTS     |  90   |\n\
-| UAS     |  88   |\n\
-+---------+-------+\n\
-Gunakan SUM untuk menjumlahkan seluruh nilai.",
-items:[
-"Klik sel tujuan",
-"Ketik =SUM(B2:B4)",
-"Tekan Enter"
-],
-correct:[
-"Klik sel tujuan",
-"Ketik =SUM(B2:B4)",
+correct: [
+"Pilih sel hasil maksimum",
+"Ketik (=)",
+"Gunakan =MAX()",
+"Masukkan rentang beban",
+"Blok kolom beban",
 "Tekan Enter"
 ]
 }
 
 ];
-
 /* =========================
    App logic
    ========================= */
