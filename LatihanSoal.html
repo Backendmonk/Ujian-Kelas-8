@@ -148,406 +148,1013 @@
 const QUESTIONS = [
 
 {
-q: "**Masalah 1: Menghitung Total Konsumsi Energi Mesin Produksi (SUM).**\nDi sebuah pabrik tekstil, setiap mesin pencelupan kain mencatat konsumsi listrik per jam. Supervisor produksi ingin mengetahui total konsumsi energi harian untuk laporan efisiensi. Kamu diminta menyusun langkah Excel untuk menghitung total energi.\n\n+-------------------+----------------+\n| Mesin             | kWh per Jam    |\n+-------------------+----------------+\n|                   |                |\n|                   |                |\n+-------------------+----------------+\n\nSusun langkah teknis penggunaan SUM.",
-items: [
-"Masukkan rentang kWh ke dalam fungsi",
-"Pilih sel untuk total energi",
-"Gunakan fungsi =SUM()",
-"Tekan Enter untuk menghasilkan total",
-"Ketik tanda sama dengan (=)",
-"Blok seluruh data konsumsi energi"
-],
-correct: [
-"Pilih sel untuk total energi",
-"Ketik tanda sama dengan (=)",
-"Gunakan fungsi =SUM()",
-"Masukkan rentang kWh ke dalam fungsi",
-"Blok seluruh data konsumsi energi",
-"Tekan Enter untuk menghasilkan total"
-]
+  "q": "**Masalah 1: Menghitung Total Penjualan Bulanan (SUM).**\nSebuah toko mencatat penjualan harian selama seminggu. Supervisor ingin mengetahui total penjualan mingguan.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Hari</th><th>Penjualan (Rp)</th></tr>\n<tr><td>Senin</td><td>150000</td></tr>\n<tr><td>Selasa</td><td>175000</td></tr>\n<tr><td>Rabu</td><td>125000</td></tr>\n</table>\n<br>\nSusun langkah teknis penggunaan SUM.",
+  "items": [
+    "Pilih sel hasil total",
+    "Ketik tanda sama dengan (=)",
+    "Gunakan fungsi =SUM()",
+    "Masukkan rentang penjualan",
+    "Blok seluruh data penjualan",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil total",
+    "Ketik tanda sama dengan (=)",
+    "Gunakan fungsi =SUM()",
+    "Masukkan rentang penjualan",
+    "Blok seluruh data penjualan",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 2: Menentukan Mesin dengan Efisiensi Terburuk (MIN).**\nTim maintenance ingin mengetahui mesin dengan output terendah dalam satu shift. Data output dicatat dalam tabel berikut:\n\n+---------------+--------------+\n| Mesin         | Output (kg)  |\n+---------------+--------------+\n|               |              |\n|               |              |\n+---------------+--------------+\n\nSusun langkah untuk mendapatkan nilai minimum secara teknis.",
-items: [
-"Pilih sel tempat nilai minimum ditampilkan",
-"Ketik (=)",
-"Gunakan fungsi =MIN()",
-"Masukkan rentang output",
-"Blok semua nilai output",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel tempat nilai minimum ditampilkan",
-"Ketik (=)",
-"Gunakan fungsi =MIN()",
-"Masukkan rentang output",
-"Blok semua nilai output",
-"Tekan Enter"
-]
+  "q": "**Masalah 2: Menentukan Nilai Tertinggi di Column (MAX).**\nSeorang guru ingin mengetahui nilai tertinggi di ujian harian.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Siswa</th><th>Nilai</th></tr>\n<tr><td>Rafi</td><td>88</td></tr>\n<tr><td>Intan</td><td>95</td></tr>\n<tr><td>Jono</td><td>82</td></tr>\n</table>\n<br>\nGunakan MAX.",
+  "items": [
+    "Blok kolom nilai",
+    "Pilih sel hasil maksimum",
+    "Ketik (=)",
+    "Gunakan =MAX()",
+    "Masukkan rentang nilai",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil maksimum",
+    "Ketik (=)",
+    "Gunakan =MAX()",
+    "Masukkan rentang nilai",
+    "Blok kolom nilai",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 3: Menentukan Suhu Maksimum Laboratorium (MAX).**\nLaboratorium kimia mencatat suhu reaktor setiap jam untuk memastikan suhu tidak melebihi batas aman.\n\n+--------------+-------------+\n| Waktu        | Suhu (°C)   |\n+--------------+-------------+\n|              |             |\n|              |             |\n+--------------+-------------+\n\nSusun prosedur Excel untuk mendapatkan suhu tertinggi.",
-items: [
-"Masukkan rentang suhu ke fungsi",
-"Pilih sel hasil maksimum",
-"Gunakan fungsi =MAX()",
-"Blok seluruh kolom suhu",
-"Ketik (=)",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel hasil maksimum",
-"Ketik (=)",
-"Gunakan fungsi =MAX()",
-"Masukkan rentang suhu ke fungsi",
-"Blok seluruh kolom suhu",
-"Tekan Enter"
-]
+  "q": "**Masalah 3: Menghitung Rata-Rata Gaji (AVERAGE).**\nHR ingin mengetahui rata-rata gaji karyawan di departemen produksi.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th><th>Gaji (Rp)</th></tr>\n<tr><td>Slamet</td><td>3000000</td></tr>\n<tr><td>Wati</td><td>3200000</td></tr>\n<tr><td>Doni</td><td>2800000</td></tr>\n</table>\n<br>\nGunakan AVERAGE.",
+  "items": [
+    "Ketik (=)",
+    "Pilih sel hasil rata-rata",
+    "Blok kolom gaji",
+    "Gunakan fungsi =AVERAGE()",
+    "Masukkan rentang gaji",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil rata-rata",
+    "Ketik (=)",
+    "Gunakan fungsi =AVERAGE()",
+    "Masukkan rentang gaji",
+    "Blok kolom gaji",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 4: Menghitung Rata-Rata Tingkat Error Barcode Gudang (AVERAGE).**\nSebuah gudang logistik ingin mengetahui rata-rata tingkat error scanner barcode.\n\n+--------------------+------------------+\n| Scanner            | Error (%)        |\n+--------------------+------------------+\n|                    |                  |\n|                    |                  |\n+--------------------+------------------+\n\nSusun langkah AVERAGE pada kasus teknis ini.",
-items: [
-"Pilih sel untuk rata-rata error",
-"Ketik (=)",
-"Masukkan rentang error ke fungsi",
-"Gunakan fungsi =AVERAGE()",
-"Blok seluruh kolom error",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel untuk rata-rata error",
-"Ketik (=)",
-"Gunakan fungsi =AVERAGE()",
-"Masukkan rentang error ke fungsi",
-"Blok seluruh kolom error",
-"Tekan Enter"
-]
+  "q": "**Masalah 4: Mencari Nilai Minimum Waktu (MIN).**\nCoach ingin tahu waktu lari tercepat untuk sprint 100m.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Atlet</th><th>Waktu (detik)</th></tr>\n<tr><td>Sinta</td><td>13.2</td></tr>\n<tr><td>Rendi</td><td>12.9</td></tr>\n<tr><td>Dita</td><td>13.5</td></tr>\n</table>\n<br>\nGunakan MIN.",
+  "items": [
+    "Blok semua waktu",
+    "Pilih sel hasil minimum",
+    "Ketik tanda sama dengan",
+    "Masukkan rentang waktu",
+    "Gunakan =MIN()",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil minimum",
+    "Ketik tanda sama dengan",
+    "Gunakan =MIN()",
+    "Masukkan rentang waktu",
+    "Blok semua waktu",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 5: Kelayakan Produk Berdasarkan Standar Kualitas (IF).**\nQC (Quality Control) ingin menentukan apakah kadar air pada sampel produk memenuhi standar (< 12%).\n\n+------------------+---------------------+\n| Sampel Produk    | Kadar Air (%)       |\n+------------------+---------------------+\n|                  |                     |\n|                  |                     |\n+------------------+---------------------+\n\nGunakan IF untuk menampilkan 'Layak' atau 'Tidak Layak'.",
-items: [
-"Masukkan syarat <12",
-"Pilih sel hasil kelayakan",
-"Ketik (=)",
-"Masukkan output 'Layak' dan 'Tidak Layak'",
-"Gunakan fungsi =IF()",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel hasil kelayakan",
-"Ketik (=)",
-"Gunakan fungsi =IF()",
-"Masukkan syarat <12",
-"Masukkan output 'Layak' dan 'Tidak Layak'",
-"Tekan Enter"
-]
+  "q": "**Masalah 5: Menghitung Jumlah Sel Berisi Angka (COUNT).**\nStaf gudang ingin menghitung berapa stok yang terisi.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Item</th><th>Stok</th></tr>\n<tr><td>Kabel</td><td>25</td></tr>\n<tr><td>Adaptor</td><td></td></tr>\n<tr><td>Mouse</td><td>40</td></tr>\n</table>\n<br>\nGunakan COUNT.",
+  "items": [
+    "Pilih sel hasil hitung",
+    "Ketik (=)",
+    "Gunakan =COUNT()",
+    "Masukkan rentang stok",
+    "Blok data stok",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil hitung",
+    "Ketik (=)",
+    "Gunakan =COUNT()",
+    "Masukkan rentang stok",
+    "Blok data stok",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 6: Menghitung Jumlah Sensor yang Memberikan Sinyal (COUNT).**\nServer IoT mencatat sinyal masuk dari berbagai sensor. Hanya sensor aktif yang memiliki nilai.\n\n+---------------+---------------+\n| Sensor        | Status Sinyal |\n+---------------+---------------+\n|               |               |\n|               |               |\n+---------------+---------------+\n\nGunakan COUNT untuk menghitung sensor aktif.",
-items: [
-"Ketik (=)",
-"Blok seluruh kolom status",
-"Gunakan fungsi =COUNT()",
-"Pilih sel keluaran jumlah",
-"Masukkan rentang status",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel keluaran jumlah",
-"Ketik (=)",
-"Gunakan fungsi =COUNT()",
-"Masukkan rentang status",
-"Blok seluruh kolom status",
-"Tekan Enter"
-]
+  "q": "**Masalah 6: Menghitung Jumlah Sel Tidak Kosong (COUNTA).**\nPanitia ingin menghitung jumlah peserta yang mengisi formulir pendaftaran.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th></tr>\n<tr><td>Ani</td></tr>\n<tr><td>Beni</td></tr>\n<tr><td></td></tr>\n<tr><td>Clara</td></tr>\n</table>\n<br>\nGunakan COUNTA.",
+  "items": [
+    "Ketik (=)",
+    "Pilih sel hasil hitung",
+    "Masukkan fungsi =COUNTA()",
+    "Blok nama peserta",
+    "Masukkan rentang",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil hitung",
+    "Ketik (=)",
+    "Masukkan fungsi =COUNTA()",
+    "Masukkan rentang",
+    "Blok nama peserta",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 7: Total Beban Jaringan Server (SUM).**\nDivisi IT ingin menjumlahkan beban bandwidth server dari berbagai aplikasi.\n\n+----------------+-------------+\n| Aplikasi       | Bandwidth   |\n+----------------+-------------+\n|                |             |\n|                |             |\n+----------------+-------------+\n\nGunakan SUM.",
-items: [
-"Ketik (=)",
-"Gunakan fungsi =SUM()",
-"Masukkan rentang bandwidth",
-"Pilih sel total",
-"Blok seluruh kolom bandwidth",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel total",
-"Ketik (=)",
-"Gunakan fungsi =SUM()",
-"Masukkan rentang bandwidth",
-"Blok seluruh kolom bandwidth",
-"Tekan Enter"
-]
+  "q": "**Masalah 7: Menghitung Banyak Siswa Nilai ≥ 75 (COUNTIF).**\nGuru ingin menghitung berapa siswa yang lulus KKM 75.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th><th>Nilai</th></tr>\n<tr><td>Tia</td><td>76</td></tr>\n<tr><td>Oka</td><td>74</td></tr>\n<tr><td>Riko</td><td>85</td></tr>\n</table>\n<br>\nGunakan COUNTIF.",
+  "items": [
+    "Pilih sel hasil hitung",
+    "Ketik (=)",
+    "Gunakan =COUNTIF()",
+    "Masukkan rentang nilai",
+    "Masukkan kriteria",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil hitung",
+    "Ketik (=)",
+    "Gunakan =COUNTIF()",
+    "Masukkan rentang nilai",
+    "Masukkan kriteria",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 8: Mencari Performa Sales Tertinggi (MAX).**\nPerusahaan ingin mengetahui siapa sales dengan performa tertinggi.\n\n+--------------+------------+\n| Sales        | Closing    |\n+--------------+------------+\n|              |            |\n|              |            |\n+--------------+------------+\n\nGunakan MAX secara teknis.",
-items: [
-"Masukkan rentang closing",
-"Ketik (=)",
-"Gunakan =MAX()",
-"Pilih sel output",
-"Blok data closing",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel output",
-"Ketik (=)",
-"Gunakan =MAX()",
-"Masukkan rentang closing",
-"Blok data closing",
-"Tekan Enter"
-]
+  "q": "**Masalah 8: Menjumlahkan Total untuk Produk Tertentu (SUMIF).**\nPenjual ingin mengetahui total penjualan barang 'Minuman'.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Produk</th><th>Jumlah (Rp)</th></tr>\n<tr><td>Minuman</td><td>20000</td></tr>\n<tr><td>Snack</td><td>15000</td></tr>\n<tr><td>Minuman</td><td>25000</td></tr>\n</table>\n<br>\nGunakan SUMIF.",
+  "items": [
+    "Pilih sel hasil",
+    "Ketik (=)",
+    "Gunakan =SUMIF()",
+    "Masukkan rentang produk",
+    "Masukkan kriteria produk",
+    "Blok kolom jumlah",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil",
+    "Ketik (=)",
+    "Gunakan =SUMIF()",
+    "Masukkan rentang produk",
+    "Masukkan kriteria produk",
+    "Blok kolom jumlah",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 9: Nilai Minimum Tegangan Listrik (MIN).**\nTeknisi panel ingin mencari tegangan paling rendah dari log monitoring.\n\n+---------------+---------------+\n| Waktu         | Tegangan (V)  |\n+---------------+---------------+\n|               |               |\n|               |               |\n+---------------+---------------+\n\nGunakan MIN.",
-items: [
-"Pilih sel keluaran",
-"Masukkan rentang tegangan",
-"Ketik (=)",
-"Gunakan =MIN()",
-"Blok seluruh kolom tegangan",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel keluaran",
-"Ketik (=)",
-"Gunakan =MIN()",
-"Masukkan rentang tegangan",
-"Blok seluruh kolom tegangan",
-"Tekan Enter"
-]
+  "q": "**Masalah 9: Rata-Rata Gaji Divisi Sales (AVERAGEIF).**\nHR ingin menghitung rata-rata gaji khusus untuk divisi Sales.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Divisi</th><th>Gaji (Rp)</th></tr>\n<tr><td>Sales</td><td>4500000</td></tr>\n<tr><td>Admin</td><td>4000000</td></tr>\n<tr><td>Sales</td><td>5000000</td></tr>\n</table>\n<br>\nGunakan AVERAGEIF.",
+  "items": [
+    "Pilih sel rata-rata",
+    "Ketik (=)",
+    "Gunakan =AVERAGEIF()",
+    "Masukkan rentang divisi",
+    "Masukkan kriteria",
+    "Masukkan rentang gaji",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel rata-rata",
+    "Ketik (=)",
+    "Gunakan =AVERAGEIF()",
+    "Masukkan rentang divisi",
+    "Masukkan kriteria",
+    "Masukkan rentang gaji",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 10: Rata-Rata Waktu Response Server (AVERAGE).**\nTim backend mengukur rata-rata waktu respons server.\n\n+----------------+------------------+\n| Request        | Response (ms)    |\n+----------------+------------------+\n|                |                  |\n|                |                  |\n+----------------+------------------+\n\nGunakan AVERAGE.",
-items: [
-"Pilih sel rata-rata",
-"Gunakan =AVERAGE()",
-"Ketik (=)",
-"Masukkan rentang respons",
-"Blok kolom respons",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel rata-rata",
-"Ketik (=)",
-"Gunakan =AVERAGE()",
-"Masukkan rentang respons",
-"Blok kolom respons",
-"Tekan Enter"
-]
+  "q": "**Masalah 10: Menentukan Status Lulus dengan IF.**\nSiswa lulus jika nilai ≥ 75.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th><th>Nilai</th></tr>\n<tr><td>Rina</td><td>80</td></tr>\n<tr><td>Andi</td><td>68</td></tr>\n</table>\n<br>\nGunakan IF.",
+  "items": [
+    "Pilih sel status",
+    "Ketik (=)",
+    "Gunakan fungsi IF",
+    "Masukkan kriteria nilai",
+    "Masukkan nilai benar/salah ('Lulus', 'Tidak')",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel status",
+    "Ketik (=)",
+    "Gunakan fungsi IF",
+    "Masukkan kriteria nilai",
+    "Masukkan nilai benar/salah ('Lulus', ''Tidak')",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 11: Menentukan Karyawan Berhak Insentif (IF).**\nHRD memberikan insentif jika absensi ≥ 95%.\n\n+---------------+-------------+\n| Karyawan      | Absensi %   |\n+---------------+-------------+\n|               |             |\n|               |             |\n+---------------+-------------+\n\nGunakan IF.",
-items: [
-"Masukkan kondisi output",
-"Ketik (=)",
-"Pilih sel status insentif",
-"Gunakan =IF()",
-"Masukkan syarat >=95%",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel status insentif",
-"Ketik (=)",
-"Gunakan =IF()",
-"Masukkan syarat >=95%",
-"Masukkan kondisi output",
-"Tekan Enter"
-]
+  "q": "**Masalah 11: Membuat Diagram Batang (Chart).**\nGuru ingin membuat diagram batang dari data pencapaian bulanan.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Bulan</th><th>Skor</th></tr>\n<tr><td>Jan</td><td>70</td></tr>\n<tr><td>Feb</td><td>85</td></tr>\n<tr><td>Mar</td><td>78</td></tr>\n</table>\n<br>\nLangkah membuat chart.",
+  "items": [
+    "Blok data dan label",
+    "Pilih tab Insert",
+    "Klik Chart Bar",
+    "Sesuaikan judul dan legenda",
+    "Pilih area chart",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Blok data dan label",
+    "Pilih tab Insert",
+    "Klik Chart Bar",
+    "Pilih area chart",
+    "Sesuaikan judul dan legenda",
+    "Tekan Enter"
+  ]
 },
 
 {
-q: "**Masalah 12: Hitung Jumlah Data Sensor Valid (COUNT).**\nTim IoT ingin menghitung jumlah sensor yang memberikan data valid (bernilai angka).\n\n+--------------+--------------+\n| Sensor       | Data         |\n+--------------+--------------+\n|              |              |\n|              |              |\n+--------------+--------------+\n\nGunakan COUNT.",
-items: [
-"Pilih sel hasil",
-"Ketik (=)",
-"Gunakan =COUNT()",
-"Masukkan rentang data",
-"Blok kolom data",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel hasil",
-"Ketik (=)",
-"Gunakan =COUNT()",
-"Masukkan rentang data",
-"Blok kolom data",
-"Tekan Enter"
-]
+  "q": "**Masalah 12: Menyimpan File sebagai PDF.**\nSiswa diminta menyimpan tugas presentasi ke PDF.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>File</th><th>Tipe</th></tr>\n<tr><td>Tugas1.pptx</td><td>PPTX</td></tr>\n</table>\n<br>\nLangkah menyimpan sebagai PDF.",
+  "items": [
+    "Buka menu File",
+    "Pilih Save As atau Export",
+    "Pilih format PDF",
+    "Tentukan lokasi penyimpanan",
+    "Klik Save atau Export",
+    "Tutup aplikasi"
+  ],
+  "correct": [
+    "Buka menu File",
+    "Pilih Save As atau Export",
+    "Pilih format PDF",
+    "Tentukan lokasi penyimpanan",
+    "Klik Save atau Export",
+    "Tutup aplikasi"
+  ]
 },
 
 {
-q: "**Masalah 13: Total Beban Kerja CPU VM (SUM).**\nAdmin server melakukan analisis beban kerja CPU dalam persentase.\n\n+------------+-----------+\n| VM         | CPU (%)   |\n+------------+-----------+\n|            |           |\n|            |           |\n+------------+-----------+\n\nGunakan SUM.",
-items: [
-"Ketik (=)",
-"Gunakan =SUM()",
-"Pilih sel total",
-"Masukkan rentang CPU",
-"Blok seluruh kolom CPU",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel total",
-"Ketik (=)",
-"Gunakan =SUM()",
-"Masukkan rentang CPU",
-"Blok seluruh kolom CPU",
-"Tekan Enter"
-]
+  "q": "**Masalah 13: Menghapus Duplicate Data (Remove Duplicates).**\nStaf ingin membersihkan data pelanggan yang duplikat.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th><th>Email</th></tr>\n<tr><td>Dwi</td><td>dwi@mail.com</td></tr>\n<tr><td>Dwi</td><td>dwi@mail.com</td></tr>\n<tr><td>Suci</td><td>suci@mail.com</td></tr>\n</table>\n<br>\nLangkah menghapus duplikat.",
+  "items": [
+    "Blok tabel",
+    "Pilih tab Data",
+    "Klik Remove Duplicates",
+    "Centang kolom yang ingin dicek",
+    "Klik OK",
+    "Simpan file"
+  ],
+  "correct": [
+    "Blok tabel",
+    "Pilih tab Data",
+    "Klik Remove Duplicates",
+    "Centang kolom yang ingin dicek",
+    "Klik OK",
+    "Simpan file"
+  ]
 },
 
 {
-q: "**Masalah 14: Output Sensor Tertinggi (MAX).**\nSebuah drone penelitian mencatat intensitas cahaya.\n\n+----------------+--------------+\n| Waktu          | Intensitas   |\n+----------------+--------------+\n|                |              |\n|                |              |\n+----------------+--------------+\n\nGunakan MAX.",
-items: [
-"Masukkan rentang intensitas",
-"Gunakan =MAX()",
-"Ketik (=)",
-"Pilih sel hasil",
-"Blok data intensitas",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel hasil",
-"Ketik (=)",
-"Gunuse =MAX()",
-"Masukkan rentang intensitas",
-"Blok data intensitas",
-"Tekan Enter"
-]
+  "q": "**Masalah 14: Mengunci Sel Tertentu (Protect Sheet).**\nGuru ingin agar kolom nilai tidak diubah oleh siswa.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th><th>Nilai</th></tr>\n<tr><td>Lina</td><td>88</td></tr>\n<tr><td>Hadi</td><td>74</td></tr>\n</table>\n<br>\nLangkah mengunci lembar.",
+  "items": [
+    "Pilih sel yang boleh diedit",
+    "Format Cells -> Protection -> Uncheck Locked",
+    "Pilih Protect Sheet",
+    "Masukkan password (opsional)",
+    "Klik OK",
+    "Simpan file"
+  ],
+  "correct": [
+    "Pilih sel yang boleh diedit",
+    "Format Cells -> Protection -> Uncheck Locked",
+    "Pilih Protect Sheet",
+    "Masukkan password (opsional)",
+    "Klik OK",
+    "Simpan file"
+  ]
 },
 
 {
-q: "**Masalah 15: Nilai Terendah Kualitas Air (MIN).**\nTim lingkungan memantau kadar pH.\n\n+--------------+--------------+\n| Titik Pantau | pH           |\n+--------------+--------------+\n|              |              |\n|              |              |\n+--------------+--------------+\n\nGunakan MIN.",
-items: [
-"Ketik (=)",
-"Masukkan rentang pH",
-"Pilih sel hasil terendah",
-"Gunakan =MIN()",
-"Blok kolom pH",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel hasil terendah",
-"Ketik (=)",
-"Gunakan =MIN()",
-"Masukkan rentang pH",
-"Blok kolom pH",
-"Tekan Enter"
-]
+  "q": "**Masalah 15: Menyambungkan Keyboard ke PC (Hardware).**\nSeorang pengguna ingin menyambungkan keyboard USB ke komputer desktop.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Perangkat</th><th>Tipe</th></tr>\n<tr><td>Keyboard</td><td>USB</td></tr>\n</table>\n<br>\nLangkah pemasangan.",
+  "items": [
+    "Matikan komputer jika perlu",
+    "Cari port USB pada PC",
+    "Sambungkan kabel keyboard ke port USB",
+    "Nyalakan komputer",
+    "Tunggu driver otomatis terinstal",
+    "Coba tekan beberapa tombol untuk uji"
+  ],
+  "correct": [
+    "Cari port USB pada PC",
+    "Sambungkan kabel keyboard ke port USB",
+    "Nyalakan komputer",
+    "Tunggu driver otomatis terinstal",
+    "Coba tekan beberapa tombol untuk uji",
+    "Matikan komputer jika perlu"
+  ]
 },
 
 {
-q: "**Masalah 16: Rata-Rata Suhu Reaktor (AVERAGE).**\nInsinyur kimia ingin menghitung rata-rata suhu operasi reaktor.\n\n+--------------+-------------+\n| Jam          | Suhu (°C)   |\n+--------------+-------------+\n|              |             |\n|              |             |\n+--------------+-------------+\n\nGunakan AVERAGE.",
-items: [
-"Masukkan rentang suhu",
-"Gunakan =AVERAGE()",
-"Pilih sel output",
-"Blok kolom suhu",
-"Ketik (=)",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel output",
-"Ketik (=)",
-"Gunakan =AVERAGE()",
-"Masukkan rentang suhu",
-"Blok kolom suhu",
-"Tekan Enter"
-]
+  "q": "**Masalah 16: Mengganti Toner Printer (Hardware).**\nOperator ingin mengganti cartridge toner pada printer kantor jenis laser.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Printer</th><th>Tipe</th></tr>\n<tr><td>HP LaserJet</td><td>Laser</td></tr>\n</table>\n<br>\nLangkah mengganti toner.",
+  "items": [
+    "Matikan printer dan cabut kabel listrik",
+    "Buka tutup cartridge",
+    "Keluarkan toner lama",
+    "Masukkan toner baru hingga klik",
+    "Tutup kembali dan sambungkan listrik",
+    "Cetak halaman uji"
+  ],
+  "correct": [
+    "Matikan printer dan cabut kabel listrik",
+    "Buka tutup cartridge",
+    "Keluarkan toner lama",
+    "Masukkan toner baru hingga klik",
+    "Tutup kembali dan sambungkan listrik",
+    "Cetak halaman uji"
+  ]
 },
 
 {
-q: "**Masalah 17: Menentukan Status Alarm (IF).**\nSensor kebocoran gas memberi status ALARM jika kondisi ≥ 8 ppm.\n\n+-------------+-------------+\n| Lokasi      | ppm         |\n+-------------+-------------+\n|             |             |\n|             |             |\n+-------------+-------------+\n\nGunakan IF.",
-items: [
-"Pilih sel status alarm",
-"Ketik (=)",
-"Gunakan =IF()",
-"Masukkan syarat >=8",
-"Masukkan output 'ALARM' dan 'AMAN'",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel status alarm",
-"Ketik (=)",
-"Gunakan =IF()",
-"Masukkan syarat >=8",
-"Masukkan output 'ALARM' dan 'AMAN'",
-"Tekan Enter"
-]
+  "q": "**Masalah 17: Membersihkan File Sampah di Windows (Disk Cleanup).**\nPC terasa lambat karena banyak file sementara.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>OS</th><th>Nama</th></tr>\n<tr><td>Windows</td><td>10</td></tr>\n</table>\n<br>\nLangkah membersihkan disk.",
+  "items": [
+    "Buka File Explorer",
+    "Klik kanan drive C: -> Properties",
+    "Klik Disk Cleanup",
+    "Pilih file yang ingin dihapus",
+    "Klik OK",
+    "Restart komputer jika diminta"
+  ],
+  "correct": [
+    "Klik kanan drive C: -> Properties",
+    "Klik Disk Cleanup",
+    "Pilih file yang ingin dihapus",
+    "Klik OK",
+    "Restart komputer jika diminta",
+    "Buka File Explorer"
+  ]
 },
 
 {
-q: "**Masalah 18: Hitung Perangkat yang Online (COUNT).**\nSebuah router mencatat perangkat dengan status IP aktif.\n\n+-------------+--------------+\n| Device      | Status       |\n+-------------+--------------+\n|             |              |\n|             |              |\n+-------------+--------------+\n\nGunakan COUNT.",
-items: [
-"Blok kolom status",
-"Masukkan rentang status",
-"Ketik (=)",
-"Pilih sel hasil online",
-"Gunakan =COUNT()",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel hasil online",
-"Ketik (=)",
-"Gunakan =COUNT()",
-"Masukkan rentang status",
-"Blok kolom status",
-"Tekan Enter"
-]
+  "q": "**Masalah 18: Instalasi Aplikasi (Software).**\nPengguna perlu menginstal aplikasi pembaca PDF.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>File</th><th>Tipe</th></tr>\n<tr><td>installer.exe</td><td>Executable</td></tr>\n</table>\n<br>\nLangkah instalasi.",
+  "items": [
+    "Unduh installer dari situs resmi",
+    "Buka file installer",
+    "Setujui terms",
+    "Pilih lokasi instalasi",
+    "Klik Install",
+    "Selesai dan jalankan aplikasi"
+  ],
+  "correct": [
+    "Unduh installer dari situs resmi",
+    "Buka file installer",
+    "Setujui terms",
+    "Pilih lokasi instalasi",
+    "Klik Install",
+    "Selesai dan jalankan aplikasi"
+  ]
 },
 
 {
-q: "**Masalah 19: Total Kecepatan Download (SUM).**\nTeknisi ISP mengukur kecepatan download beberapa server edge.\n\n+------------+------------------+\n| Server     | Mbps             |\n+------------+------------------+\n|            |                  |\n|            |                  |\n+------------+------------------+\n\nGunakan SUM.",
-items: [
-"Ketik (=)",
-"Pilih sel total",
-"Gunakan =SUM()",
-"Masukkan rentang Mbps",
-"Blok semua nilai Mbps",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel total",
-"Ketik (=)",
-"Gunakan =SUM()",
-"Masukkan rentang Mbps",
-"Blok semua nilai Mbps",
-"Tekan Enter"
-]
+  "q": "**Masalah 19: Backup Data ke External Drive.**\nStaff IT ingin memindahkan folder penting ke hard drive eksternal.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Folder</th><th>Ukuran</th></tr>\n<tr><td>Dokumen</td><td>2GB</td></tr>\n</table>\n<br>\nLangkah backup.",
+  "items": [
+    "Sambungkan hard drive eksternal",
+    "Buka File Explorer",
+    "Cari folder sumber",
+    "Salin atau Cut folder",
+    "Paste ke drive eksternal",
+    "Eject drive dengan aman"
+  ],
+  "correct": [
+    "Sambungkan hard drive eksternal",
+    "Buka File Explorer",
+    "Cari folder sumber",
+    "Salin atau Cut folder",
+    "Paste ke drive eksternal",
+    "Eject drive dengan aman"
+  ]
 },
 
 {
-q: "**Masalah 20: Nilai Maksimum Beban Robot Industri (MAX).**\nRobot industri mencatat beban angkat per operasi.\n\n+-------------+-------------+\n| Operasi     | Beban (kg)  |\n+-------------+-------------+\n|             |             |\n|             |             |\n+-------------+-------------+\n\nGunakan MAX.",
-items: [
-"Gunakan =MAX()",
-"Ketik (=)",
-"Pilih sel hasil maksimum",
-"Masukkan rentang beban",
-"Blok kolom beban",
-"Tekan Enter"
-],
-correct: [
-"Pilih sel hasil maksimum",
-"Ketik (=)",
-"Gunakan =MAX()",
-"Masukkan rentang beban",
-"Blok kolom beban",
-"Tekan Enter"
-]
+  "q": "**Masalah 20: Mengatur Level Volume Speaker (Software/Hardware).**\nPengguna mengeluhkan suara terlalu kecil saat presentasi.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Perangkat</th><th>Type</th></tr>\n<tr><td>Speaker</td><td>External</td></tr>\n</table>\n<br>\nLangkah menaikkan volume.",
+  "items": [
+    "Periksa koneksi kabel audio",
+    "Naikkan volume pada speaker fisik",
+    "Klik ikon suara di taskbar",
+    "Atur slider volume di OS",
+    "Periksa pengaturan aplikasi (mis. PowerPoint)",
+    "Tes suara"
+  ],
+  "correct": [
+    "Periksa koneksi kabel audio",
+    "Naikkan volume pada speaker fisik",
+    "Klik ikon suara di taskbar",
+    "Atur slider volume di OS",
+    "Periksa pengaturan aplikasi (mis. PowerPoint)",
+    "Tes suara"
+  ]
+},
+
+{
+  "q": "**Masalah 21: Mengatur Printer Default (Software).**\nSeorang staf ingin agar cetakan otomatis terkirim ke printer kantor.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Printer</th><th>Status</th></tr>\n<tr><td>Office_Printer</td><td>Connected</td></tr>\n</table>\n<br>\nLangkah mengatur default printer.",
+  "items": [
+    "Buka Settings -> Devices",
+    "Pilih Printers & Scanners",
+    "Pilih printer yang diinginkan",
+    "Klik Set as default",
+    "Tes cetak halaman",
+    "Restart aplikasi jika perlu"
+  ],
+  "correct": [
+    "Buka Settings -> Devices",
+    "Pilih Printers & Scanners",
+    "Pilih printer yang diinginkan",
+    "Klik Set as default",
+    "Tes cetak halaman",
+    "Restart aplikasi jika perlu"
+  ]
+},
+
+{
+  "q": "**Masalah 22: Instalasi Driver GPU (Software/Hardware).**\nSeorang gamer ingin menginstal driver kartu grafis terbaru.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Kartu</th><th>Model</th></tr>\n<tr><td>NVIDIA</td><td>GTX Series</td></tr>\n</table>\n<br>\nLangkah instalasi driver.",
+  "items": [
+    "Identifikasi model GPU",
+    "Unduh driver dari situs resmi",
+    "Jalankan installer",
+    "Pilih Express atau Custom",
+    "Selesaikan instalasi lalu restart",
+    "Cek versi driver di Device Manager"
+  ],
+  "correct": [
+    "Identifikasi model GPU",
+    "Unduh driver dari situs resmi",
+    "Jalankan installer",
+    "Pilih Express atau Custom",
+    "Selesaikan instalasi lalu restart",
+    "Cek versi driver di Device Manager"
+  ]
+},
+
+{
+  "q": "**Masalah 23: Membersihkan Cache Browser (Software).**\nBrowser sering macet karena cache menumpuk.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Browser</th><th>Versi</th></tr>\n<tr><td>Chrome</td><td>Latest</td></tr>\n</table>\n<br>\nLangkah membersihkan cache.",
+  "items": [
+    "Buka menu Settings/More Tools",
+    "Pilih Clear browsing data",
+    "Pilih rentang waktu",
+    "Centang Cached images and files",
+    "Klik Clear data",
+    "Restart browser"
+  ],
+  "correct": [
+    "Buka menu Settings/More Tools",
+    "Pilih Clear browsing data",
+    "Pilih rentang waktu",
+    "Centang Cached images and files",
+    "Klik Clear data",
+    "Restart browser"
+  ]
+},
+
+{
+  "q": "**Masalah 24: Memindahkan Kolom di Excel.**\nPengguna ingin menukar posisi kolom Nama dan Alamat.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th><th>Alamat</th></tr>\n<tr><td>Joko</td><td>Denpasar</td></tr>\n<tr><td>Sari</td><td>Gianyar</td></tr>\n</table>\n<br>\nLangkah memindahkan kolom.",
+  "items": [
+    "Pilih header kolom yang akan dipindah",
+    "Klik kanan -> Cut",
+    "Pilih lokasi tujuan kolom",
+    "Klik kanan -> Insert Cut Cells",
+    "Periksa data",
+    "Simpan file"
+  ],
+  "correct": [
+    "Pilih header kolom yang akan dipindah",
+    "Klik kanan -> Cut",
+    "Pilih lokasi tujuan kolom",
+    "Klik kanan -> Insert Cut Cells",
+    "Periksa data",
+    "Simpan file"
+  ]
+},
+
+{
+  "q": "**Masalah 25: Menentukan Tipe File dengan Ekstensi (Software).**\nSiswa menemukan file .xlsx dan ingin tahu aplikasinya.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>File</th><th>Ekstensi</th></tr>\n<tr><td>Workbook</td><td>.xlsx</td></tr>\n</table>\n<br>\nLangkah mengetahui tipe file.",
+  "items": [
+    "Klik kanan pada file",
+    "Pilih Properties",
+    "Lihat Type of file / Open with",
+    "Cek aplikasi yang direkomendasikan",
+    "Jika perlu, pilih Change untuk ganti default",
+    "Tutup jendela Properties"
+  ],
+  "correct": [
+    "Klik kanan pada file",
+    "Pilih Properties",
+    "Lihat Type of file / Open with",
+    "Cek aplikasi yang direkomendasikan",
+    "Jika perlu, pilih Change untuk ganti default",
+    "Tutup jendela Properties"
+  ]
+},
+
+{
+  "q": "**Masalah 26: Upgrade RAM pada Laptop (Hardware).**\nSeorang pengguna ingin menambah kapasitas RAM agar multitasking lebih lancar.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Laptop</th><th>RAM</th></tr>\n<tr><td>Model A</td><td>4GB</td></tr>\n</table>\n<br>\nLangkah upgrade RAM.",
+  "items": [
+    "Matikan laptop dan cabut adaptor",
+    "Buka penutup belakang sesuai manual",
+    "Grounding untuk mencegah statis",
+    "Lepas modul RAM lama jika perlu",
+    "Pasang modul RAM baru sejajar slot",
+    "Pasang kembali penutup dan nyalakan"
+  ],
+  "correct": [
+    "Matikan laptop dan cabut adaptor",
+    "Buka penutup belakang sesuai manual",
+    "Grounding untuk mencegah statis",
+    "Lepas modul RAM lama jika perlu",
+    "Pasang modul RAM baru sejajar slot",
+    "Pasang kembali penutup dan nyalakan"
+  ]
+},
+
+{
+  "q": "**Masalah 27: Memperbaiki Koneksi Wi‑Fi (Software/Hardware).**\nPengguna tidak dapat terhubung ke jaringan Wi‑Fi kantor.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Router</th><th>Status</th></tr>\n<tr><td>OfficeWiFi</td><td>Online</td></tr>\n</table>\n<br>\nLangkah troubleshooting.",
+  "items": [
+    "Periksa apakah Wi‑Fi di perangkat aktif",
+    "Restart router jika perlu",
+    "Lupakan jaringan dan sambungkan ulang",
+    "Periksa password yang dimasukkan",
+    "Cek apakah perangkat lain bisa terhubung",
+    "Hubungi admin jaringan jika masih bermasalah"
+  ],
+  "correct": [
+    "Periksa apakah Wi‑Fi di perangkat aktif",
+    "Cek apakah perangkat lain bisa terhubung",
+    "Lupakan jaringan dan sambungkan ulang",
+    "Periksa password yang dimasukkan",
+    "Restart router jika perlu",
+    "Hubungi admin jaringan jika masih bermasalah"
+  ]
+},
+
+{
+  "q": "**Masalah 28: Menambah Filter Otomatis pada Tabel (Excel).**\nPengguna ingin menambahkan filter untuk menyortir data produk.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Produk</th><th>Stok</th></tr>\n<tr><td>Teh</td><td>20</td></tr>\n<tr><td>Kopi</td><td>10</td></tr>\n</table>\n<br>\nLangkah menambah filter.",
+  "items": [
+    "Blok header tabel",
+    "Pilih tab Data",
+    "Klik Filter",
+    "Gunakan dropdown filter pada header",
+    "Pilih kriteria filter",
+    "Terapkan dan periksa hasil"
+  ],
+  "correct": [
+    "Blok header tabel",
+    "Pilih tab Data",
+    "Klik Filter",
+    "Gunakan dropdown filter pada header",
+    "Pilih kriteria filter",
+    "Terapkan dan periksa hasil"
+  ]
+},
+
+{
+  "q": "**Masalah 29: Mengunci File dengan Password (Software).**\nDokumen penting perlu diberi password agar tidak dibuka orang lain.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>File</th><th>Type</th></tr>\n<tr><td>Kontrak.docx</td><td>Word</td></tr>\n</table>\n<br>\nLangkah mengunci file.",
+  "items": [
+    "Buka file di Word",
+    "Pilih menu File -> Info",
+    "Klik Protect Document",
+    "Pilih Encrypt with Password",
+    "Masukkan password dan konfirmasi",
+    "Simpan file"
+  ],
+  "correct": [
+    "Buka file di Word",
+    "Pilih menu File -> Info",
+    "Klik Protect Document",
+    "Pilih Encrypt with Password",
+    "Masukkan password dan konfirmasi",
+    "Simpan file"
+  ]
+},
+
+{
+  "q": "**Masalah 30: Mengganti Background Slide (PowerPoint).**\nGuru ingin mengganti latar belakang slide presentasi.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Slide</th><th>Background</th></tr>\n<tr><td>Slide 1</td><td>Default</td></tr>\n</table>\n<br>\nLangkah mengganti background.",
+  "items": [
+    "Pilih slide yang diinginkan",
+    "Klik kanan -> Format Background",
+    "Pilih Fill (Solid/Gradient/Picture)",
+    "Pilih gambar atau warna",
+    "Klik Apply to All jika ingin seragam",
+    "Simpan presentasi"
+  ],
+  "correct": [
+    "Pilih slide yang diinginkan",
+    "Klik kanan -> Format Background",
+    "Pilih Fill (Solid/Gradient/Picture)",
+    "Pilih gambar atau warna",
+    "Klik Apply to All jika ingin seragam",
+    "Simpan presentasi"
+  ]
+},
+
+{
+  "q": "**Masalah 31: Menemukan Duplikat di Kolom Email (Excel).**\nData marketing perlu dibersihkan dari alamat email ganda.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Email</th></tr>\n<tr><td>abc@mail.com</td></tr>\n<tr><td>def@mail.com</td></tr>\n<tr><td>abc@mail.com</td></tr>\n</table>\n<br>\nLangkah menemukan duplikat menggunakan Conditional Formatting.",
+  "items": [
+    "Blok kolom email",
+    "Pilih tab Home",
+    "Klik Conditional Formatting",
+    "Pilih Highlight Cells Rules -> Duplicate Values",
+    "Pilih format highlight",
+    "Klik OK"
+  ],
+  "correct": [
+    "Blok kolom email",
+    "Pilih tab Home",
+    "Klik Conditional Formatting",
+    "Pilih Highlight Cells Rules -> Duplicate Values",
+    "Pilih format highlight",
+    "Klik OK"
+  ]
+},
+
+{
+  "q": "**Masalah 32: Merestore File dari Recycle Bin (Software).**\nSalah satu file terhapus tidak sengaja.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>File</th><th>Status</th></tr>\n<tr><td>Laporan.xlsx</td><td>Deleted</td></tr>\n</table>\n<br>\nLangkah mengembalikan file.",
+  "items": [
+    "Buka Recycle Bin",
+    "Cari file yang ingin direstore",
+    "Klik kanan pada file",
+    "Pilih Restore",
+    "Periksa lokasi asal file",
+    "Tutup Recycle Bin"
+  ],
+  "correct": [
+    "Buka Recycle Bin",
+    "Cari file yang ingin direstore",
+    "Klik kanan pada file",
+    "Pilih Restore",
+    "Periksa lokasi asal file",
+    "Tutup Recycle Bin"
+  ]
+},
+
+{
+  "q": "**Masalah 33: Mengatur AutoSum (Excel).**\nPengguna ingin cepat menambahkan angka di bawah kolom.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Item</th><th>Harga</th></tr>\n<tr><td>Bolpoin</td><td>2000</td></tr>\n<tr><td>Buku</td><td>15000</td></tr>\n</table>\n<br>\nLangkah menggunakan AutoSum.",
+  "items": [
+    "Pilih sel di bawah angka terakhir",
+    "Klik tab Home atau Formula",
+    "Klik AutoSum (Σ)",
+    "Periksa rentang yang disarankan",
+    "Tekan Enter",
+    "Simpan file"
+  ],
+  "correct": [
+    "Pilih sel di bawah angka terakhir",
+    "Klik tab Home atau Formula",
+    "Klik AutoSum (Σ)",
+    "Periksa rentang yang disarankan",
+    "Tekan Enter",
+    "Simpan file"
+  ]
+},
+
+{
+  "q": "**Masalah 34: Menguji Kondisi IF Bersarang (Excel).**\nBuat status nilai: 'Memuaskan' jika ≥85, 'Cukup' jika ≥70, else 'Perlu Bimbingan'.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama</th><th>Nilai</th></tr>\n<tr><td>Nina</td><td>87</td></tr>\n<tr><td>Gus</td><td>72</td></tr>\n</table>\n<br>\nLangkah membuat IF bersarang.",
+  "items": [
+    "Pilih sel hasil",
+    "Ketik (=)",
+    "Tulis formula IF bersarang",
+    "Masukkan referensi nilai",
+    "Tekan Enter",
+    "Copy formula ke bawah"
+  ],
+  "correct": [
+    "Pilih sel hasil",
+    "Ketik (=)",
+    "Tulis formula IF bersarang",
+    "Masukkan referensi nilai",
+    "Tekan Enter",
+    "Copy formula ke bawah"
+  ]
+},
+
+{
+  "q": "**Masalah 35: Mengganti Hard Drive (HDD) ke SSD (Hardware).**\nSeorang pengguna ingin mempercepat laptop dengan mengganti HDD ke SSD.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Drive</th><th>Tipe</th></tr>\n<tr><td>System</td><td>HDD 1TB</td></tr>\n</table>\n<br>\nLangkah penggantian.",
+  "items": [
+    "Backup data penting",
+    "Matikan dan cabut daya",
+    "Buka casing atau penutup laptop",
+    "Lepas HDD lama",
+    "Pasang SSD baru dan sambungkan kabel",
+    "Pasang kembali casing dan restore data"
+  ],
+  "correct": [
+    "Backup data penting",
+    "Matikan dan cabut daya",
+    "Buka casing atau penutup laptop",
+    "Lepas HDD lama",
+    "Pasang SSD baru dan sambungkan kabel",
+    "Pasang kembali casing dan restore data"
+  ]
+},
+
+{
+  "q": "**Masalah 36: Mengaktifkan Trackpad pada Laptop (Hardware/Software).**\nPengguna trackpad tidak berfungsi setelah update.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Perangkat</th><th>Model</th></tr>\n<tr><td>Laptop</td><td>Model B</td></tr>\n</table>\n<br>\nLangkah mengaktifkan trackpad.",
+  "items": [
+    "Periksa setting Touchpad di Settings",
+    "Pastikan Touchpad tidak dalam keadaan Off",
+    "Periksa tombol fungsi (Fn + F-key) untuk enable/disable",
+    "Update driver Touchpad jika perlu",
+    "Restart laptop",
+    "Tes fungsi trackpad"
+  ],
+  "correct": [
+    "Periksa setting Touchpad di Settings",
+    "Pastikan Touchpad tidak dalam keadaan Off",
+    "Periksa tombol fungsi (Fn + F-key) untuk enable/disable",
+    "Update driver Touchpad jika perlu",
+    "Restart laptop",
+    "Tes fungsi trackpad"
+  ]
+},
+
+{
+  "q": "**Masalah 37: Mengatur Filter Email (Software).**\nPengguna ingin memindahkan email dari langganan ke folder khusus.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Mail</th><th>From</th></tr>\n<tr><td>Promo</td><td>newsletter@shop.com</td></tr>\n</table>\n<br>\nLangkah membuat rule/filter.",
+  "items": [
+    "Buka webmail atau aplikasi email",
+    "Masuk ke Settings -> Filters/Rules",
+    "Buat rule baru dengan kriteria pengirim",
+    "Pilih action Move to folder",
+    "Nama folder dan simpan rule",
+    "Uji dengan email baru"
+  ],
+  "correct": [
+    "Buka webmail atau aplikasi email",
+    "Masuk ke Settings -> Filters/Rules",
+    "Buat rule baru dengan kriteria pengirim",
+    "Pilih action Move to folder",
+    "Nama folder dan simpan rule",
+    "Uji dengan email baru"
+  ]
+},
+
+{
+  "q": "**Masalah 38: Menambahkan Header & Footer di Excel (Page Setup).**\nPengguna ingin menambahkan judul dokumen pada header cetak.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Sheet</th><th>Nama</th></tr>\n<tr><td>Sheet1</td><td>Data</td></tr>\n</table>\n<br>\nLangkah menambahkan header/footer.",
+  "items": [
+    "Pilih tab Page Layout atau Page Setup",
+    "Klik Header & Footer",
+    "Pilih header area (left/center/right)",
+    "Ketik judul atau insert elements",
+    "Klik outside untuk menyimpan",
+    "Preview sebelum mencetak"
+  ],
+  "correct": [
+    "Pilih tab Page Layout atau Page Setup",
+    "Klik Header & Footer",
+    "Pilih header area (left/center/right)",
+    "Ketik judul atau insert elements",
+    "Klik outside untuk menyimpan",
+    "Preview sebelum mencetak"
+  ]
+},
+
+{
+  "q": "**Masalah 39: Mengatur Shortcut Keyboard (Software).**\nPengguna ingin membuat shortcut untuk membuka folder kerja cepat.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Folder</th><th>Path</th></tr>\n<tr><td>Kerja</td><td>C:\\Users\\User\\Kerja</td></tr>\n</table>\n<br>\nLangkah membuat shortcut.",
+  "items": [
+    "Klik kanan pada folder",
+    "Pilih Create shortcut",
+    "Pindahkan shortcut ke Desktop",
+    "Klik kanan pada shortcut -> Properties",
+    "Isi Shortcut key jika ingin hotkey",
+    "Klik OK"
+  ],
+  "correct": [
+    "Klik kanan pada folder",
+    "Pilih Create shortcut",
+    "Pindahkan shortcut ke Desktop",
+    "Klik kanan pada shortcut -> Properties",
+    "Isi Shortcut key jika ingin hotkey",
+    "Klik OK"
+  ]
+},
+
+{
+  "q": "**Masalah 40: Menyembunyikan Kolom (Excel).**\nPengguna ingin menyembunyikan kolom harga sementara.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Produk</th><th>Harga</th></tr>\n<tr><td>Sabun</td><td>5000</td></tr>\n</table>\n<br>\nLangkah menyembunyikan kolom.",
+  "items": [
+    "Pilih header kolom Harga",
+    "Klik kanan -> Hide",
+    "Periksa tampilan sheet",
+    "Unhide jika ingin tampilkan kembali",
+    "Simpan file",
+    "Informasikan perubahan kepada tim"
+  ],
+  "correct": [
+    "Pilih header kolom Harga",
+    "Klik kanan -> Hide",
+    "Periksa tampilan sheet",
+    "Unhide jika ingin tampilkan kembali",
+    "Simpan file",
+    "Informasikan perubahan kepada tim"
+  ]
+},
+
+{
+  "q": "**Masalah 41: Mengatur Firewall untuk Aplikasi (Software).**\nAdmin ingin membuka akses program tertentu lewat firewall.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Program</th><th>Status</th></tr>\n<tr><td>AppX</td><td>Blocked</td></tr>\n</table>\n<br>\nLangkah membuka akses firewall.",
+  "items": [
+    "Buka Windows Security -> Firewall & network protection",
+    "Klik Allow an app through firewall",
+    "Klik Change settings",
+    "Cari aplikasi dan centang network types",
+    "Klik OK",
+    "Tes koneksi aplikasi"
+  ],
+  "correct": [
+    "Buka Windows Security -> Firewall & network protection",
+    "Klik Allow an app through firewall",
+    "Klik Change settings",
+    "Cari aplikasi dan centang network types",
+    "Klik OK",
+    "Tes koneksi aplikasi"
+  ]
+},
+
+{
+  "q": "**Masalah 42: Menggunakan VLOOKUP (Excel).**\nGuru ingin mencari nama siswa berdasarkan ID.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>ID</th><th>Nama</th></tr>\n<tr><td>001</td><td>Sari</td></tr>\n<tr><td>002</td><td>Budi</td></tr>\n</table>\n<br>\nLangkah menggunakan VLOOKUP.",
+  "items": [
+    "Pilih sel hasil pencarian",
+    "Ketik (=)",
+    "Gunakan =VLOOKUP()",
+    "Masukkan lookup value (ID)",
+    "Masukkan table array dan kolom index",
+    "Tekan Enter"
+  ],
+  "correct": [
+    "Pilih sel hasil pencarian",
+    "Ketik (=)",
+    "Gunakan =VLOOKUP()",
+    "Masukkan lookup value (ID)",
+    "Masukkan table array dan kolom index",
+    "Tekan Enter"
+  ]
+},
+
+{
+  "q": "**Masalah 43: Memperbarui Sistem Operasi (Software).**\nPC perlu update Windows untuk patch keamanan.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>OS</th><th>Versi</th></tr>\n<tr><td>Windows</td><td>10</td></tr>\n</table>\n<br>\nLangkah update OS.",
+  "items": [
+    "Buka Settings -> Update & Security",
+    "Klik Check for updates",
+    "Unduh update jika tersedia",
+    "Klik Install dan tunggu proses",
+    "Restart jika diminta",
+    "Periksa kembali status update"
+  ],
+  "correct": [
+    "Buka Settings -> Update & Security",
+    "Klik Check for updates",
+    "Unduh update jika tersedia",
+    "Klik Install dan tunggu proses",
+    "Restart jika diminta",
+    "Periksa kembali status update"
+  ]
+},
+
+{
+  "q": "**Masalah 44: Mengganti Resolusi Layar (Software).**\nPengguna ingin menyesuaikan resolusi agar tampilan tidak pecah.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Monitor</th><th>Resolusi</th></tr>\n<tr><td>LCD</td><td>1366x768</td></tr>\n</table>\n<br>\nLangkah mengganti resolusi.",
+  "items": [
+    "Klik kanan Desktop -> Display settings",
+    "Cari Resolution",
+    "Pilih resolusi yang diinginkan",
+    "Klik Apply",
+    "Konfirmasi jika tampilan OK",
+    "Simpan pengaturan"
+  ],
+  "correct": [
+    "Klik kanan Desktop -> Display settings",
+    "Cari Resolution",
+    "Pilih resolusi yang diinginkan",
+    "Klik Apply",
+    "Konfirmasi jika tampilan OK",
+    "Simpan pengaturan"
+  ]
+},
+
+{
+  "q": "**Masalah 45: Membersihkan Keyboard Mechanical (Hardware).**\nKeyboard berminyak dan perlu dibersihkan.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Perangkat</th><th>Tipe</th></tr>\n<tr><td>Keyboard</td><td>Mechanical</td></tr>\n</table>\n<br>\nLangkah membersihkan keyboard.",
+  "items": [
+    "Cabut kabel dari PC",
+    "Gunakan keycap puller untuk melepas keycaps",
+    "Bersihkan debu dengan kuas dan compressed air",
+    "Lap keycaps dengan sabun ringan dan keringkan",
+    "Pasang kembali keycaps",
+    "Sambungkan kembali keyboard dan tes"
+  ],
+  "correct": [
+    "Cabut kabel dari PC",
+    "Gunakan keycap puller untuk melepas keycaps",
+    "Bersihkan debu dengan kuas dan compressed air",
+    "Lap keycaps dengan sabun ringan dan keringkan",
+    "Pasang kembali keycaps",
+    "Sambungkan kembali keyboard dan tes"
+  ]
+},
+
+{
+  "q": "**Masalah 46: Menambahkan Hyperlink di Excel (Software).**\nPengguna ingin menautkan nama file ke folder lain.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Nama File</th><th>Link</th></tr>\n<tr><td>Laporan</td><td></td></tr>\n</table>\n<br>\nLangkah menambahkan hyperlink.",
+  "items": [
+    "Pilih sel yang akan diberi hyperlink",
+    "Klik kanan -> Link atau Insert -> Hyperlink",
+    "Browse lokasi file atau masukkan URL",
+    "Klik OK",
+    "Uji klik link",
+    "Simpan file"
+  ],
+  "correct": [
+    "Pilih sel yang akan diberi hyperlink",
+    "Klik kanan -> Link atau Insert -> Hyperlink",
+    "Browse lokasi file atau masukkan URL",
+    "Klik OK",
+    "Uji klik link",
+    "Simpan file"
+  ]
+},
+
+{
+  "q": "**Masalah 47: Mengembalikan Sistem ke Restore Point (Software).**\nSistem bermasalah setelah instal program baru.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Sistem</th><th>Status</th></tr>\n<tr><td>Windows</td><td>Stable</td></tr>\n</table>\n<br>\nLangkah restore system.",
+  "items": [
+    "Buka Control Panel -> Recovery",
+    "Pilih Open System Restore",
+    "Pilih restore point yang diinginkan",
+    "Klik Next -> Finish",
+    "Tunggu proses selesai dan restart",
+    "Periksa apakah masalah teratasi"
+  ],
+  "correct": [
+    "Buka Control Panel -> Recovery",
+    "Pilih Open System Restore",
+    "Pilih restore point yang diinginkan",
+    "Klik Next -> Finish",
+    "Tunggu proses selesai dan restart",
+    "Periksa apakah masalah teratasi"
+  ]
+},
+
+{
+  "q": "**Masalah 48: Mengubah Format Angka Menjadi Mata Uang (Excel).**\nPengguna ingin menampilkan angka sebagai format Rupiah.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Produk</th><th>Harga</th></tr>\n<tr><td>Teh</td><td>5000</td></tr>\n</table>\n<br>\nLangkah mengubah format angka.",
+  "items": [
+    "Blok kolom harga",
+    "Klik kanan -> Format Cells",
+    "Pilih Number -> Currency atau Custom",
+    "Pilih simbol Rp atau ketik custom",
+    "Klik OK",
+    "Periksa tampilan sel"
+  ],
+  "correct": [
+    "Blok kolom harga",
+    "Klik kanan -> Format Cells",
+    "Pilih Number -> Currency atau Custom",
+    "Pilih simbol Rp atau ketik custom",
+    "Klik OK",
+    "Periksa tampilan sel"
+  ]
+},
+
+{
+  "q": "**Masalah 49: Menghubungkan Proyektor ke Laptop (Hardware).**\nPresenter ingin menampilkan slide ke layar proyektor.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Perangkat</th><th>Port</th></tr>\n<tr><td>Laptop</td><td>HDMI</td></tr>\n<tr><td>Proyektor</td><td>HDMI</td></tr>\n</table>\n<br>\nLangkah menyambungkan proyektor.",
+  "items": [
+    "Matikan kedua perangkat jika perlu",
+    "Sambungkan kabel HDMI antara laptop dan proyektor",
+    "Nyalakan proyektor lalu laptop",
+    "Pilih source/input pada proyektor",
+    "Atur mode tampilan di laptop (Duplicate/Extend)",
+    "Tes presentasi"
+  ],
+  "correct": [
+    "Sambungkan kabel HDMI antara laptop dan proyektor",
+    "Nyalakan proyektor lalu laptop",
+    "Pilih source/input pada proyektor",
+    "Atur mode tampilan di laptop (Duplicate/Extend)",
+    "Tes presentasi",
+    "Matikan kedua perangkat jika perlu"
+  ]
+},
+
+{
+  "q": "**Masalah 50: Menggunakan Pivot Table untuk Ringkasan Data (Excel).**\nManager ingin ringkasan penjualan per kategori.\n<br><br>\n<table border='1' cellpadding='4'>\n<tr><th>Kategori</th><th>Penjualan</th></tr>\n<tr><td>Makanan</td><td>500000</td></tr>\n<tr><td>Minuman</td><td>300000</td></tr>\n</table>\n<br>\nLangkah membuat Pivot Table.",
+  "items": [
+    "Blok seluruh tabel data",
+    "Pilih tab Insert",
+    "Klik PivotTable",
+    "Pilih lokasi untuk Pivot (new sheet)",
+    "Seret field Category ke Rows dan Penjualan ke Values",
+    "Analisis hasil"
+  ],
+  "correct": [
+    "Blok seluruh tabel data",
+    "Pilih tab Insert",
+    "Klik PivotTable",
+    "Pilih lokasi untuk Pivot (new sheet)",
+    "Seret field Category ke Rows dan Penjualan ke Values",
+    "Analisis hasil"
+  ]
 }
 
 ];
+
+export default QUESTIONS;
+
 /* =========================
    App logic
    ========================= */
