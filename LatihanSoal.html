@@ -1275,8 +1275,15 @@ function updateAnswer(){
 
 // Prev/Next
 $.btnPrev.addEventListener('click', ()=>{
- if(current>0){ current--; renderQuestion(current); }
+  // ketika user menekan "Sebelumnya", hapus jawaban untuk soal yang sedang ditinggalkan
+  // supaya ketika kembali (tekan "Selanjutnya") pilihan sebelumnya tidak muncul lagi
+  if(current>0){
+    answers[current] = null; // clear saved answer for current question
+    current--;
+    renderQuestion(current);
+  }
 });
+
 $.btnNext.addEventListener('click', ()=>{
   updateAnswer();
   if(current<totalQ-1){ current++; renderQuestion(current); }
